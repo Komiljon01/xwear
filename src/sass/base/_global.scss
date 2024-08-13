@@ -1,0 +1,20 @@
+.container {
+  max-width: 1362px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+@media screen and (max-width: 360px) {
+  .container {
+    padding: 0 10px;
+  }
+}

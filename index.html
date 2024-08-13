@@ -18,6 +18,65 @@
     <link rel="stylesheet" href="./src/css/main.css" />
   </head>
   <body>
-    <h1>XWEAR</h1>
+    <header>
+      <nav class="nav">
+        <div class="container">
+          <div class="wrapper">
+            <a class="nav__logo" href="./index.html">
+              <img src="./src/assets/logo.svg" alt="logo" />
+            </a>
+
+            <span class="nav-open"><i class="fa-solid fa-bars"></i></span>
+
+            <ul class="nav__lists">
+              <span class="nav-close"><i class="fa-solid fa-xmark"></i></span>
+              <li class="nav__links">
+                Одежда <i class="fa-solid fa-angle-down"></i>
+              </li>
+              <li class="nav__links">
+                Обувь <i class="fa-solid fa-angle-down"></i>
+              </li>
+              <li class="nav__links">
+                Аксессуары <i class="fa-solid fa-angle-down"></i>
+              </li>
+              <li class="nav__links">
+                Бренды <i class="fa-solid fa-angle-down"></i>
+              </li>
+              <a class="nav__links" href="#">Расчет стоимости</a>
+              <div class="nav__dropdown">
+                <button class="nav__dropdown-btn">
+                  Информация <i class="fa-solid fa-angle-down"></i>
+                </button>
+                <div class="nav__dropdown-content">
+                  <a class="nav__dropdown-link" href="#">Наш блог</a>
+                  <a class="nav__dropdown-link" href="#">Наши контакты</a>
+                  <a class="nav__dropdown-link" href="#">Доставка</a>
+                  <a class="nav__dropdown-link" href="#">Оплата</a>
+                  <a class="nav__dropdown-link" href="#">FAQ</a>
+                </div>
+              </div>
+            </ul>
+
+            <div class="nav__actions">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <a class="nav__actions-logo" href="./index.html">
+                <img src="./src/assets/logo.svg" alt="logo" />
+              </a>
+              <a href="#"><i class="fa-regular fa-star"></i></a>
+              <a href="#"><i class="fa-regular fa-user"></i></a>
+              <div class="nav__actions-shop">
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                <p>11 899 ₽</p>
+                <span>7</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="overlay hidden"></div>
+
+    <script src="./src/js/navbar.js"></script>
   </body>
 </html>

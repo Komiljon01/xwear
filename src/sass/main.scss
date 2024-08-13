@@ -1,2 +1,5 @@
-@import "./base/reset.scss";
+@import "./base/reset";
+@import "./abstracts/_variables";
 @import "./components/button";
+@import "./base/global";
+@import "./components/navbar";
