@@ -364,10 +364,138 @@ select {
     opacity: 0.7;
   }
 }
+.product__wrapper:nth-child(2) {
+  margin: 80px 0;
+}
+.product__wrapper .product__intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 38px;
+  gap: 0 15px;
+  flex-wrap: wrap;
+}
+.product__wrapper .product__intro-title {
+  color: #121214;
+  font-size: 31px;
+  font-weight: 900;
+  line-height: 42px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+.product__wrapper .product__intro-link {
+  color: #000;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 23px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgb(18, 18, 20);
+}
+.product__wrapper .product__intro-link i {
+  transition: transform 0.3s ease;
+}
+.product__wrapper .product__intro-link:hover i {
+  transform: translateX(2px);
+}
+.product__wrapper .swiper {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 69px;
+}
+.product__wrapper .swiper-slide {
+  background: #fff;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.product__wrapper .swiper-slide .sneakers-add {
+  position: absolute;
+  top: 33px;
+  right: 25px;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+.product__wrapper .swiper-slide .sneakers-add:hover {
+  color: orange;
+}
+.product__wrapper .swiper-slide_img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.product__wrapper .swiper-slide_img:hover {
+  transform: translateY(-2px);
+}
+.product__wrapper .swiper-slide .sneaker__title {
+  color: #000;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+.product__wrapper .swiper-slide .sneaker__text {
+  color: #3c3c3c;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0%;
+}
+.product__wrapper .swiper-pagination {
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product__wrapper .swiper-pagination .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  background-color: #121214;
+  opacity: 0.7;
+}
+.product__wrapper .swiper-pagination .swiper-pagination-bullet-active {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .product__wrapper:nth-child(2) {
+    margin: 60px 0;
+  }
+  .product__wrapper .product__intro {
+    margin-bottom: 25px;
+  }
+  .product__wrapper .product__intro-title {
+    font-size: 25px;
+    line-height: 42px;
+  }
+  .product__wrapper .swiper {
+    padding-bottom: 50px;
+  }
+  .product__wrapper .swiper-slide .sneakers-add {
+    top: 0px;
+    right: 0px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .product__wrapper .swiper-slide .sneaker__title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+  .product__wrapper .swiper-slide .sneaker__text {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
 .hero {
   max-width: 1541px;
   margin: 49px auto 0;
-  margin-bottom: 50px;
   position: relative;
   background-image: url("../assets/header-bg.png");
   background-repeat: no-repeat;
@@ -453,6 +581,11 @@ select {
   opacity: 1;
 }
 
+.products {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
 @media screen and (max-width: 768px) {
   .hero {
     max-width: 100%;
@@ -475,6 +608,9 @@ select {
   }
   .hero__controls-bullets {
     display: none;
+  }
+  .products {
+    margin-top: 44px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -518,6 +654,9 @@ select {
   .hero__controls-prev, .hero__controls-next {
     width: 35px;
     height: 35px;
+  }
+  .products {
+    margin-top: 44px;
   }
 }
 

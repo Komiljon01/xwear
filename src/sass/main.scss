@@ -3,11 +3,11 @@
 @import "./components/button";
 @import "./base/global";
 @import "./components/navbar";
+@import "./components/products";
 
 .hero {
   max-width: 1541px;
   margin: 49px auto 0;
-  margin-bottom: 50px;
   position: relative;
   background-image: url("../assets/header-bg.png");
   background-repeat: no-repeat;
@@ -107,6 +107,11 @@
   }
 }
 
+.products {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
 // Responsive
 @media screen and (max-width: 768px) {
   .hero {
@@ -137,6 +142,10 @@
     &__controls-bullets {
       display: none;
     }
+  }
+
+  .products {
+    margin-top: 44px;
   }
 }
 
@@ -193,5 +202,9 @@
         height: 35px;
       }
     }
+  }
+
+  .products {
+    margin-top: 44px;
   }
 }
