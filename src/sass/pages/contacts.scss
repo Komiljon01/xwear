@@ -1,0 +1,400 @@
+@import "../base/reset";
+@import "../abstracts/_variables";
+@import "../components/button";
+@import "../base/global";
+@import "../components/navbar";
+@import "../components/_footer";
+
+.contacts {
+  padding: 14px 0 110px;
+
+  &__intro {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    a,
+    span {
+      color: #8c8f96;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0%;
+    }
+
+    a {
+      &:last-child {
+        color: $primary;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__title {
+    margin: 46px 0 56px;
+    color: $primary;
+    font-size: 31px;
+    font-weight: 900;
+    line-height: 42px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+  }
+
+  &__cards {
+    display: flex;
+    gap: 60px;
+
+    .contacts__form,
+    .contacts__messengers {
+      width: 50%;
+
+      h3 {
+        color: #303030;
+        font-size: 23px;
+        font-weight: 800;
+        line-height: 36px;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+      }
+    }
+
+    .contacts__form {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      &-top {
+        display: flex;
+        gap: 30px;
+      }
+
+      & > label,
+      &-top label {
+        width: 100%;
+        padding: 14px 20px;
+        border-radius: 5px;
+
+        background: #f9f9f9;
+
+        span {
+          display: block;
+          color: #3c3d44;
+          font-size: 13px;
+          font-weight: 600;
+          line-height: 22px;
+          letter-spacing: 0%;
+        }
+
+        &:has(input) {
+          input {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0%;
+          }
+        }
+
+        &:has(textarea) {
+          textarea {
+            width: 100%;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0%;
+            resize: none;
+          }
+        }
+      }
+
+      &-bottom {
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+        flex-wrap: wrap-reverse;
+
+        label {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+
+          p {
+            color: #5b5b5c;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0%;
+
+            a {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .contacts__messengers {
+      &-text {
+        margin: 9px 0 19px;
+        color: #454545;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: 0%;
+      }
+
+      &-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        gap: 30px;
+      }
+
+      &-card {
+        display: flex;
+        gap: 17px;
+
+        &-icon {
+          font-size: 30px;
+          position: relative;
+
+          &::before {
+            position: absolute;
+            content: "";
+            top: 6px;
+            right: -8px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #49d0ff;
+            z-index: -1;
+          }
+        }
+
+        &_content {
+          display: flex;
+          flex-direction: column;
+
+          h5 {
+            color: #121214;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 36px;
+            letter-spacing: 0%;
+          }
+
+          a {
+            color: #303030;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 28px;
+            letter-spacing: 0%;
+            text-align: left;
+          }
+
+          p {
+            color: #303030;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: 0%;
+          }
+        }
+      }
+
+      &-buttons {
+        margin-top: 36px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+
+        a {
+          padding: 18px 20px;
+          border-radius: 4px;
+          color: #000000;
+          font-size: 12px;
+          font-weight: 800;
+          line-height: 20px;
+          letter-spacing: 0%;
+          text-transform: uppercase;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          transition: all 0.3s ease;
+
+          &:first-child {
+            border: 1px solid #2bb3eb;
+
+            &:hover {
+              background-color: #2bb3eb;
+              color: #fff;
+            }
+          }
+
+          &:last-child {
+            border: 1px solid #4fca5d;
+
+            &:hover {
+              background-color: #4fca5d;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .contacts {
+    &__cards {
+      flex-direction: column;
+
+      .contacts__form {
+        width: 100%;
+
+        h3 {
+          text-align: center;
+        }
+      }
+
+      .contacts__messengers {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+
+        &-card {
+          justify-content: center;
+        }
+
+        &-buttons {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contacts {
+    padding: 13px 0 80px;
+
+    &__title {
+      margin: 34px 0 40px;
+      font-size: 25px;
+      line-height: 29px;
+    }
+
+    &__cards {
+      .contacts__form,
+      .contacts__messengers {
+        h3 {
+          font-size: 19px;
+          line-height: 28px;
+        }
+      }
+
+      .contacts__form {
+        gap: 20px;
+
+        &-top {
+          gap: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .contacts {
+    &__cards {
+      .contacts__form {
+        &-top {
+          flex-direction: column;
+        }
+      }
+
+      .contacts__messengers {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contacts {
+    &__title {
+      text-align: center;
+    }
+
+    &__cards {
+      .contacts__form {
+        &-bottom {
+          justify-content: center;
+          text-align: center;
+        }
+      }
+
+      .contacts__messengers {
+        &-card {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          &_content {
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contacts {
+    &__cards {
+      .contacts__messengers {
+        &-cards {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .contacts {
+    padding-bottom: 60px;
+
+    &__title {
+      margin: 15px 0 24px;
+      font-size: 19px;
+      line-height: 30px;
+    }
+
+    &__cards {
+      .contacts__form,
+      .contacts__messengers {
+        h3 {
+          font-size: 16px;
+          line-height: 25px;
+        }
+      }
+
+      .contacts__form {
+        gap: 15px;
+
+        &-top {
+          gap: 15px;
+        }
+      }
+    }
+  }
+}
