@@ -15,7 +15,7 @@ const closeMenu = () => {
   navList.style = "transform: translateX(-100%)";
   overlay.classList.remove("show");
   overlay.classList.add("hidden");
-  body.style.overflowY = "auto";
+  body.style.overflowY = "visible";
 };
 
 navOpen.addEventListener("click", openMenu);

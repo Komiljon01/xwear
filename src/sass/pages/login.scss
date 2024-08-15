@@ -1,0 +1,205 @@
+@import "../base/reset";
+@import "../abstracts/_variables";
+@import "../components/button";
+@import "../base/global";
+@import "../components/navbar";
+@import "../components/_footer";
+
+.login {
+  padding: 14px 0 119px;
+
+  &__intro {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    a,
+    p,
+    span {
+      color: #8c8f96;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0%;
+    }
+
+    p {
+      color: $primary;
+    }
+  }
+
+  &__title {
+    margin: 46px 0;
+    color: $primary;
+    font-size: 31px;
+    font-weight: 900;
+    line-height: 42px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+  }
+
+  &__cards {
+    display: flex;
+    gap: 30px;
+
+    .login__enter,
+    .login__register {
+      width: 50%;
+      border: 1px solid #e9eaee;
+      border-radius: 5px;
+      background-color: #fff;
+      padding: 34px 40px 35px;
+
+      h3 {
+        color: #303030;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 0%;
+        margin-bottom: 26px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      form > label {
+        padding: 14px 22px 16px;
+        border-radius: 5px;
+        background: #f9f9f9;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        color: #3c3d44;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: 0%;
+
+        input {
+          border: none;
+          outline: none;
+          background-color: transparent;
+          color: #424347;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 22px;
+          letter-spacing: 0%;
+        }
+      }
+
+      button {
+        margin: 0 auto;
+        transition: opacity .3s ease;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+
+    .login__enter {
+      .login__enter-form__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px 10px;
+        flex-wrap: wrap;
+
+        label {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+
+        a {
+          color: #676767;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+          letter-spacing: 0%;
+          text-decoration-line: underline;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .login {
+    padding: 14px 0 80px;
+
+    &__title {
+      margin: 34px 0 21px;
+      font-size: 25px;
+      line-height: 29px;
+    }
+
+    &__cards {
+      flex-direction: column;
+
+      .login__enter,
+      .login__register {
+        width: 100%;
+        padding: 30px;
+
+        h3 {
+          font-size: 19px;
+          line-height: 28px;
+          margin-bottom: 20px;
+        }
+
+        form {
+          gap: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .login {
+    .login__enter,
+    .login__register {
+      padding: 25px 20px;
+
+      form {
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .login {
+    padding-bottom: 40px;
+
+    &__title {
+      margin: 15px 0 24px;
+      font-size: 19px;
+      line-height: 30px;
+    }
+
+    .login__enter,
+    .login__register {
+      padding: 20px 15px;
+
+      h3 {
+        text-align: center;
+        font-size: 15px;
+        line-height: 28px;
+      }
+    }
+
+    .login__enter {
+      .login__enter-form__footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

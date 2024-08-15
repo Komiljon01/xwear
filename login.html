@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XWEAR</title>
+    <!-- Fontawesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/css/login.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="nav">
+      <div class="container">
+        <div class="wrapper">
+          <a class="nav__logo" href="./index.html">
+            <img src="./src/assets/logo.svg" alt="logo" />
+          </a>
+
+          <span class="nav-open"><i class="fa-solid fa-bars"></i></span>
+
+          <ul class="nav__lists">
+            <li class="nav__links">
+              Одежда <i class="fa-solid fa-angle-down"></i>
+            </li>
+            <li class="nav__links">
+              Обувь <i class="fa-solid fa-angle-down"></i>
+            </li>
+            <li class="nav__links">
+              Аксессуары <i class="fa-solid fa-angle-down"></i>
+            </li>
+            <li class="nav__links">
+              Бренды <i class="fa-solid fa-angle-down"></i>
+            </li>
+            <a class="nav__links" href="#">Расчет стоимости</a>
+            <div class="nav__dropdown">
+              <button class="nav__dropdown-btn">
+                Информация <i class="fa-solid fa-angle-down"></i>
+              </button>
+              <div class="nav__dropdown-content">
+                <a class="nav__dropdown-link" href="#">Наш блог</a>
+                <a class="nav__dropdown-link" href="#">Наши контакты</a>
+                <a class="nav__dropdown-link" href="#">Доставка</a>
+                <a class="nav__dropdown-link" href="#">Оплата</a>
+                <a class="nav__dropdown-link" href="./faq.html">FAQ</a>
+              </div>
+            </div>
+          </ul>
+
+          <ul class="nav__lists-sm">
+            <span class="nav-close"><i class="fa-solid fa-xmark"></i></span>
+            <li class="nav__links">
+              Одежда <i class="fa-solid fa-angle-down"></i>
+            </li>
+            <li class="nav__links">
+              Обувь <i class="fa-solid fa-angle-down"></i>
+            </li>
+            <li class="nav__links">
+              Аксессуары <i class="fa-solid fa-angle-down"></i>
+            </li>
+            <li class="nav__links">
+              Бренды <i class="fa-solid fa-angle-down"></i>
+            </li>
+            <a class="nav__links" href="#">Расчет стоимости</a>
+            <div class="nav__dropdown">
+              <button class="nav__dropdown-btn">
+                Информация <i class="fa-solid fa-angle-down"></i>
+              </button>
+              <div class="nav__dropdown-content">
+                <a class="nav__dropdown-link" href="#">Наш блог</a>
+                <a class="nav__dropdown-link" href="#">Наши контакты</a>
+                <a class="nav__dropdown-link" href="#">Доставка</a>
+                <a class="nav__dropdown-link" href="#">Оплата</a>
+                <a class="nav__dropdown-link" href="./faq.html">FAQ</a>
+              </div>
+            </div>
+          </ul>
+
+          <div class="nav__actions">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <a class="nav__actions-logo" href="./index.html">
+              <img src="./src/assets/logo.svg" alt="logo" />
+            </a>
+            <a class="sneakers-add" href="#"
+              ><i class="fa-regular fa-star"></i
+            ></a>
+            <a href="#"><i class="fa-regular fa-user"></i></a>
+            <div class="nav__actions-shop">
+              <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+              <p>11 899 ₽</p>
+              <span>7</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Login -->
+    <section class="login">
+      <div class="container">
+        <div class="login__intro">
+          <a href="./index.html">Главная</a>
+          <span>/</span>
+          <p>Личный кабинет</p>
+        </div>
+
+        <h3 class="login__title">Аккаунт</h3>
+
+        <div class="login__cards">
+          <div class="login__enter">
+            <h3>Войти</h3>
+
+            <form class="login__enter-form">
+              <label>
+                <span>Email адрес:</span>
+                <input
+                  type="email"
+                  placeholder="yavasyaivanov@gmail.com"
+                  required
+                />
+              </label>
+
+              <label>
+                <span>Пароль:</span>
+                <input
+                  type="password"
+                  placeholder="*********************"
+                  required
+                />
+              </label>
+
+              <div class="login__enter-form__footer">
+                <label>
+                  <input type="checkbox" />
+                  <span>Запомнить меня</span>
+                </label>
+
+                <a href="#">Забыли пароль?</a>
+              </div>
+
+              <button type="submit" class="login__enter-form__btn btn">
+                Войти
+              </button>
+            </form>
+          </div>
+
+          <div class="login__register">
+            <h3>Регистрация</h3>
+
+            <form class="login__register-form">
+              <label>
+                <span>Email адрес:</span>
+                <input
+                  type="email"
+                  placeholder="yavasyaivanov@gmail.com"
+                  required
+                />
+              </label>
+
+              <label>
+                <span>Пароль:</span>
+                <input
+                  type="password"
+                  placeholder="*********************"
+                  required
+                />
+              </label>
+
+              <label>
+                <span>Повторите пароль:</span>
+                <input
+                  type="password"
+                  placeholder="*********************"
+                  required
+                />
+              </label>
+
+              <button type="submit" class="login__register-form__btn btn">
+                Зарегистрироваться
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-lg">
+          <div class="footer-lg-catalogue">
+            <h4>Каталог</h4>
+            <a class="footer-lg-catalogue__link" href="#">Одежда</a>
+            <a class="footer-lg-catalogue__link" href="#">Обувь</a>
+            <a class="footer-lg-catalogue__link" href="#">Аксессуары</a>
+            <a class="footer-lg-catalogue__link" href="#">Расчет стоимости</a>
+            <a href="./index.html">
+              <img src="./src/assets/footer-logo.svg" alt="footer logo" />
+            </a>
+          </div>
+          <div class="footer-lg-information">
+            <h4>Информация</h4>
+            <a class="footer-lg-information__link" href="#">Блог</a>
+            <a class="footer-lg-information__link" href="#">Контакты</a>
+            <a class="footer-lg-information__link" href="#">Доставка</a>
+            <a class="footer-lg-information__link" href="#">Оплата</a>
+            <a class="footer-lg-information__link" href="./faq.html">FAQ</a>
+            <a href="#">
+              <img
+                src="./src/assets/footer-info.svg"
+                alt="readycode website icon"
+              />
+            </a>
+          </div>
+          <div class="footer-lg-contacts">
+            <h4>Контакты</h4>
+            <a class="footer-lg-contacts__email" href="mailto:info@xwear.info"
+              >info@xwear.info</a
+            >
+            <a class="footer-lg-contacts__tel" href="tel:+7 993 608 38 85"
+              >+7 993 608 38 85</a
+            >
+            <p class="footer-lg-contacts__social">Мессенджеры</p>
+            <div class="footer-lg-contacts__messengers">
+              <a href="#">
+                <img src="./src/assets/telegram.svg" alt="telegram icon" />
+              </a>
+              <a href="#">
+                <img src="./src/assets/whatsapp.svg" alt="whatsapp icon" />
+              </a>
+            </div>
+            <p class="footer-lg-contacts__social">Наши соц.сети</p>
+            <a href="#">
+              <img src="./src/assets/vkontakte.svg" alt="vkontakte icon" />
+            </a>
+          </div>
+          <div class="footer-lg-news">
+            <h4>Подписка на новости</h4>
+            <p>Будьте в курсе скидок и новостей</p>
+            <form class="footer-lg-news__form">
+              <input type="email" required placeholder="Ваш email" />
+              <button type="submit">
+                <i class="fa-solid fa-angle-right"></i>
+              </button>
+            </form>
+            <p>
+              Подписываясь на рассылку вы соглашатесь с обработкой персональных
+              данных
+            </p>
+            <a class="footer-lg-news__policy" href="#">
+              <p>Политика конфиденциальности</p>
+              <p>Пользовательское соглашение</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-md">
+          <div class="footer-md__news">
+            <div class="footer-md__news-intro">
+              <div>
+                <h4>Подписка на новости</h4>
+                <p>Будьте в курсе скидок и новостей</p>
+              </div>
+              <form>
+                <input type="email" placeholder="Ваш email" required />
+                <button type="submit">
+                  <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </form>
+            </div>
+            <p>
+              Подписываясь на рассылку вы соглашатесь с обработкой персональных
+              данных
+            </p>
+            <div class="footer-md__news-bottom">
+              <a href="./index.html">
+                <img src="./src/assets/footer-logo.svg" alt="footer logo" />
+              </a>
+
+              <a href="#">
+                <p>Политика конфиденциальности</p>
+                <p>Пользовательское соглашение</p>
+              </a>
+
+              <a href="#">
+                <img
+                  src="./src/assets/footer-info.svg"
+                  alt="readycode website icon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-sm">
+          <a href="./index.html" class="footer-sm__logo">
+            <img src="./src/assets/footer-logo.svg" alt="footer logo" />
+          </a>
+
+          <div class="footer-sm__accordion">
+            <div class="footer-sm__accordion-content">
+              <div class="footer-sm__accordion-content_header">
+                <span>Информация</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <div class="footer-sm__accordion-content-footer">
+                <a href="#">Блог</a>
+                <a href="#">Контакты</a>
+                <a href="#">Доставка</a>
+                <a href="#">Оплата</a>
+                <a href="./faq.html">FAQ</a>
+              </div>
+            </div>
+
+            <div class="footer-sm__accordion-content">
+              <div class="footer-sm__accordion-content_header">
+                <span>Каталог</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <div class="footer-sm__accordion-content-footer">
+                <a href="#">Одежда</a>
+                <a href="#">Обувь</a>
+                <a href="#">Аксессуары</a>
+                <a href="#">Расчет стоимости</a>
+              </div>
+            </div>
+
+            <div class="footer-sm__accordion-content">
+              <div class="footer-sm__accordion-content_header">
+                <span>Контакты</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <div class="footer-sm__accordion-content-footer">
+                <a href="mailto:info@xwear.info">info@xwear.info</a>
+                <a href="tel:+7 993 608 38 85">+7 993 608 38 85</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-sm__messengers">
+            <a href="#">
+              <img src="./src/assets/telegram.svg" alt="telegram icon" />
+            </a>
+            <a href="#">
+              <img src="./src/assets/whatsapp.svg" alt="whatsapp icon" />
+            </a>
+            <a href="#">
+              <img src="./src/assets/vkontakte.svg" alt="vkontakte icon" />
+            </a>
+          </div>
+
+          <h4 class="footer-sm__news-title">Подписка на новости</h4>
+          <p class="footer-sm__news-text">Будьте в курсе скидок и новостей</p>
+
+          <form class="footer-sm__form">
+            <input type="email" required placeholder="Ваш email" />
+            <button type="submit">
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </form>
+
+          <p>
+            Подписываясь на рассылку вы соглашатесь с обработкой персональных
+            данных
+          </p>
+
+          <a href="#" class="footer-sm__policy">
+            <p>Политика конфиденциальности</p>
+            <p>Пользовательское соглашение</p>
+          </a>
+
+          <a href="#">
+            <img src="./src/assets/footer-info.svg" alt="readycode icon" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="overlay hidden"></div>
+
+    <!-- Scripts -->
+    <script src="./src/js/navbar.js"></script>
+    <script src="./src/js/footer.js"></script>
+  </body>
+</html>
