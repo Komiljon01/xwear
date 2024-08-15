@@ -1,0 +1,131 @@
+@import "../base/reset";
+@import "../abstracts/_variables";
+@import "../components/button";
+@import "../base/global";
+@import "../components/navbar";
+@import "../components/_footer";
+
+.empty {
+  padding: 14px 0 207px;
+
+  &__intro {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    a,
+    span {
+      color: #8c8f96;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0%;
+    }
+
+    a {
+      &:last-child {
+        color: $primary;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__title {
+    margin: 46px 0 28px;
+    color: $primary;
+    font-size: 31px;
+    font-weight: 900;
+    line-height: 42px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    width: 637px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 120px auto 0;
+    gap: 20px;
+    text-align: center;
+
+    &-img {
+      width: 100px;
+    }
+
+    h3 {
+      color: #303030;
+      font-size: 23px;
+      font-weight: 800;
+      line-height: 36px;
+      letter-spacing: 0%;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: #666666;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 27px;
+      letter-spacing: 0%;
+    }
+
+    a {
+      transition: opacity 0.3s eas;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .empty {
+    padding: 13px 0 150px;
+
+    &__title {
+      margin: 34px 0 21px;
+      font-size: 25px;
+      line-height: 29px;
+    }
+
+    &__content {
+      margin-top: 80px;
+      width: 100%;
+
+      h3 {
+        font-size: 19px;
+        line-height: 28px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .empty {
+    padding-bottom: 60px;
+
+    &__title {
+      margin: 15px 0 24px;
+      font-size: 19px;
+      line-height: 30px;
+    }
+
+    &__content {
+      margin-top: 40px;
+      gap: 20px;
+
+      h3 {
+        font-size: 15px;
+        line-height: 28px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+}

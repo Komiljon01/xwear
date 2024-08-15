@@ -14,7 +14,7 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./src/css/login.css" />
+    <link rel="stylesheet" href="./src/css/empty.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -105,91 +105,28 @@
       </div>
     </nav>
 
-    <!-- Login -->
-    <section class="login">
+    <!-- Empty Cart -->
+    <section class="empty">
       <div class="container">
-        <div class="login__intro">
+        <div class="empty__intro">
           <a href="./index.html">Главная</a>
           <span>/</span>
-          <p>Личный кабинет</p>
+          <a href="./empty-featured-products.html">Избранные товары</a>
         </div>
 
-        <h3 class="login__title">Аккаунт</h3>
+        <h3 class="empty__title">Избранные товары</h3>
 
-        <div class="login__cards">
-          <div class="login__enter">
-            <h3>Войти</h3>
-
-            <form class="login__enter-form">
-              <label>
-                <span>Email адрес:</span>
-                <input
-                  type="email"
-                  placeholder="yavasyaivanov@gmail.com"
-                  required
-                />
-              </label>
-
-              <label>
-                <span>Пароль:</span>
-                <input
-                  type="password"
-                  placeholder="*********************"
-                  required
-                />
-              </label>
-
-              <div class="login__enter-form__footer">
-                <label>
-                  <input type="checkbox" />
-                  <span>Запомнить меня</span>
-                </label>
-
-                <a href="#">Забыли пароль?</a>
-              </div>
-
-              <button type="submit" class="login__enter-form__btn btn">
-                Войти
-              </button>
-            </form>
+        <div class="empty__content">
+          <div class="empty__content-img">
+            <img src="./src/assets/star.png" alt="star icon" />
           </div>
 
-          <div class="login__register">
-            <h3>Регистрация</h3>
-
-            <form class="login__register-form">
-              <label>
-                <span>Email адрес:</span>
-                <input
-                  type="email"
-                  placeholder="yavasyaivanov@gmail.com"
-                  required
-                />
-              </label>
-
-              <label>
-                <span>Пароль:</span>
-                <input
-                  type="password"
-                  placeholder="*********************"
-                  required
-                />
-              </label>
-
-              <label>
-                <span>Повторите пароль:</span>
-                <input
-                  type="password"
-                  placeholder="*********************"
-                  required
-                />
-              </label>
-
-              <button type="submit" class="login__register-form__btn btn">
-                Зарегистрироваться
-              </button>
-            </form>
-          </div>
+          <h3>Этот список желаний пуст.</h3>
+          <p>
+            У вас пока нет товаров в списке желаний. На странице "Каталог" вы
+            найдете много интересных товаров.
+          </p>
+          <a href="#" class="btn">Перейти в каталог</a>
         </div>
       </div>
     </section>

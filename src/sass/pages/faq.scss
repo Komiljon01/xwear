@@ -12,21 +12,20 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    a {
-      &:first-child {
-        color: #8c8f96;
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 20px;
-        letter-spacing: 0%;
-      }
 
+    a,
+    span {
+      color: #8c8f96;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0%;
+    }
+
+    a {
       &:last-child {
         color: $primary;
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 20px;
-        letter-spacing: 0%;
+        font-weight: 600;
       }
     }
   }
