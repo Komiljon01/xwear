@@ -14,7 +14,7 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./src/css/login.css" />
+    <link rel="stylesheet" href="./src/css/send-email.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -109,91 +109,22 @@
       </div>
     </nav>
 
-    <!-- Login -->
-    <section class="login">
+    <!-- send -->
+    <section class="send">
       <div class="container">
-        <div class="login__intro">
+        <div class="send__intro">
           <a href="./index.html">Главная</a>
           <span>/</span>
-          <p>Личный кабинет</p>
+          <a href="./reset-password.html">Восстановление пароля</a>
         </div>
 
-        <h3 class="login__title">Аккаунт</h3>
-
-        <div class="login__cards">
-          <div class="login__enter">
-            <h3>Войти</h3>
-
-            <form class="login__enter-form">
-              <label>
-                <span>Email адрес:</span>
-                <input
-                  type="email"
-                  placeholder="yavasyaivanov@gmail.com"
-                  required
-                />
-              </label>
-
-              <label>
-                <span>Пароль:</span>
-                <input
-                  type="password"
-                  placeholder="*********************"
-                  required
-                />
-              </label>
-
-              <div class="login__enter-form__footer">
-                <label>
-                  <input type="checkbox" />
-                  <span>Запомнить меня</span>
-                </label>
-
-                <a href="./reset-password.html">Забыли пароль?</a>
-              </div>
-
-              <button type="submit" class="login__enter-form__btn btn">
-                Войти
-              </button>
-            </form>
-          </div>
-
-          <div class="login__register">
-            <h3>Регистрация</h3>
-
-            <form class="login__register-form">
-              <label>
-                <span>Email адрес:</span>
-                <input
-                  type="email"
-                  placeholder="yavasyaivanov@gmail.com"
-                  required
-                />
-              </label>
-
-              <label>
-                <span>Пароль:</span>
-                <input
-                  type="password"
-                  placeholder="*********************"
-                  required
-                />
-              </label>
-
-              <label>
-                <span>Повторите пароль:</span>
-                <input
-                  type="password"
-                  placeholder="*********************"
-                  required
-                />
-              </label>
-
-              <button type="submit" class="login__register-form__btn btn">
-                Зарегистрироваться
-              </button>
-            </form>
-          </div>
+        <h3 class="send__title">Восстановление пароля</h3>
+        <div class="send__info">
+          <span><i class="fa-solid fa-info"></i></span>
+          <p>
+            Ссылка для сброса пароля и дальнейших инструкций отправлена вам на
+            почту. Перейдите по ссылке и следуйте дальнейшим инструкциям.
+          </p>
         </div>
       </div>
     </section>
