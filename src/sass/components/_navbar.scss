@@ -106,6 +106,10 @@
     }
   }
 
+  .nav__lists-sm {
+    display: none;
+  }
+
   &__actions {
     display: flex;
     align-items: center;
@@ -200,13 +204,18 @@
       margin-left: 50px;
     }
 
-    ul {
+    .nav__lists {
+      display: none;
+    }
+
+    .nav__lists-sm {
       position: fixed;
       width: 60%;
       top: 0;
       left: 0;
       bottom: 0;
       background-color: $primary;
+      display: flex;
       flex-direction: column;
       justify-content: start;
       align-items: start;
@@ -268,7 +277,7 @@
       gap: 36px;
     }
 
-    ul {
+    .nav__lists-sm {
       width: 100%;
       padding: 67px 44px;
 

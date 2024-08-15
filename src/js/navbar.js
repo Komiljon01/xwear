@@ -1,4 +1,4 @@
-const navList = document.querySelector(".nav__lists"),
+const navList = document.querySelector(".nav__lists-sm"),
   navOpen = document.querySelector(".nav-open"),
   navClose = document.querySelector(".nav-close"),
   overlay = document.querySelector(".overlay"),

@@ -203,6 +203,9 @@ select {
 .nav ul .nav__dropdown:hover .nav__dropdown-content {
   display: flex;
 }
+.nav .nav__lists-sm {
+  display: none;
+}
 .nav__actions {
   display: flex;
   align-items: center;
@@ -274,13 +277,17 @@ select {
     display: block;
     margin-left: 50px;
   }
-  .nav ul {
+  .nav .nav__lists {
+    display: none;
+  }
+  .nav .nav__lists-sm {
     position: fixed;
     width: 60%;
     top: 0;
     left: 0;
     bottom: 0;
     background-color: #121214;
+    display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
@@ -288,7 +295,7 @@ select {
     padding: 70px;
     transform: translateX(-100%);
   }
-  .nav ul .nav-close {
+  .nav .nav__lists-sm .nav-close {
     display: block;
     position: absolute;
     top: 30px;
@@ -327,11 +334,11 @@ select {
     justify-content: start;
     gap: 36px;
   }
-  .nav ul {
+  .nav .nav__lists-sm {
     width: 100%;
     padding: 67px 44px;
   }
-  .nav ul .nav-close {
+  .nav .nav__lists-sm .nav-close {
     top: 17px;
     left: 22px;
   }
