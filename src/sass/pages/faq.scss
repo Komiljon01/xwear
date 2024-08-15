@@ -1,0 +1,162 @@
+@import "../base/reset";
+@import "../abstracts/_variables";
+@import "../components/button";
+@import "../base/global";
+@import "../components/navbar";
+@import "../components/_footer";
+
+.faq {
+  margin: 14px 0 107px;
+
+  &__intro {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    a {
+      &:first-child {
+        color: #8c8f96;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0%;
+      }
+
+      &:last-child {
+        color: $primary;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0%;
+      }
+    }
+  }
+
+  &__title {
+    margin: 46px 0 28px;
+    color: $primary;
+    font-size: 31px;
+    font-weight: 900;
+    line-height: 42px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+  }
+
+  &__accordion-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+  }
+
+  &__accordion {
+    width: 100%;
+
+    h3 {
+      color: $primary;
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 28px;
+      letter-spacing: 0%;
+      text-transform: uppercase;
+    }
+
+    &-content {
+      border-bottom: 1px solid #ddd;
+      padding: 21px 10px;
+
+      &_header {
+        min-height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: all 0.2s linear;
+        gap: 10px;
+
+        span {
+          color: $primary;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 28px;
+          letter-spacing: 0%;
+          text-transform: uppercase;
+        }
+
+        i {
+          font-size: 14px;
+          color: #2c2c2c;
+        }
+      }
+
+      &-footer {
+        display: none;
+        transition: all 0.2s linear;
+
+        p {
+          color: #2f2f2f;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 21px;
+          letter-spacing: 0%;
+          transition: opacity 0.3s ease;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .faq {
+    margin: 13px 0 80px;
+
+    &__intro {
+      flex-wrap: wrap;
+    }
+
+    &__title {
+      margin: 34px 0 21px;
+      font-size: 25px;
+      line-height: 29px;
+    }
+
+    &__accordion {
+      h3 {
+        font-size: 19px;
+        line-height: 28px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .faq {
+    &__title {
+      margin: 15px 0 24px;
+      font-size: 19px;
+      line-height: 30px;
+    }
+
+    &__accordion {
+      h3 {
+        font-size: 15px;
+        line-height: 28px;
+      }
+
+      &-content {
+        &_header {
+          span {
+            font-size: 13px;
+            line-height: 22px;
+          }
+
+          i {
+            font-size: 13px;
+          }
+        }
+
+        &-footer {
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+}
