@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XWEAR</title>
+    <!-- Fontawesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/css/catalogue.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="nav">
+      <div class="container">
+        <div class="wrapper">
+          <a class="nav__logo" href="./index.html">
+            <img src="./src/assets/logo.svg" alt="logo" />
+          </a>
+
+          <span class="nav-open"><i class="fa-solid fa-bars"></i></span>
+
+          <ul class="nav__lists">
+            <li class="nav__links">
+              Одежда <i class="fa-solid fa-angle-down"></i>
+            </li>
+            <li class="nav__links">
+              Обувь <i class="fa-solid fa-angle-down"></i>
+            </li>
+            <li class="nav__links">
+              Аксессуары <i class="fa-solid fa-angle-down"></i>
+            </li>
+            <li class="nav__links">
+              Бренды <i class="fa-solid fa-angle-down"></i>
+            </li>
+            <a class="nav__links" href="#">Расчет стоимости</a>
+            <div class="nav__dropdown">
+              <button class="nav__dropdown-btn">
+                Информация <i class="fa-solid fa-angle-down"></i>
+              </button>
+              <div class="nav__dropdown-content">
+                <a class="nav__dropdown-link" href="#">Наш блог</a>
+                <a class="nav__dropdown-link" href="./contacts.html"
+                  >Наши контакты</a
+                >
+                <a class="nav__dropdown-link" href="#">Доставка</a>
+                <a class="nav__dropdown-link" href="./payment.html">Оплата</a>
+                <a class="nav__dropdown-link" href="./faq.html">FAQ</a>
+              </div>
+            </div>
+          </ul>
+
+          <ul class="nav__lists-sm">
+            <span class="nav-close"><i class="fa-solid fa-xmark"></i></span>
+            <li class="nav__links">
+              Одежда <i class="fa-solid fa-angle-down"></i>
+            </li>
+            <li class="nav__links">
+              Обувь <i class="fa-solid fa-angle-down"></i>
+            </li>
+            <li class="nav__links">
+              Аксессуары <i class="fa-solid fa-angle-down"></i>
+            </li>
+            <li class="nav__links">
+              Бренды <i class="fa-solid fa-angle-down"></i>
+            </li>
+            <a class="nav__links" href="#">Расчет стоимости</a>
+            <div class="nav__dropdown">
+              <button class="nav__dropdown-btn">
+                Информация <i class="fa-solid fa-angle-down"></i>
+              </button>
+              <div class="nav__dropdown-content">
+                <a class="nav__dropdown-link" href="#">Наш блог</a>
+                <a class="nav__dropdown-link" href="./contacts.html"
+                  >Наши контакты</a
+                >
+                <a class="nav__dropdown-link" href="#">Доставка</a>
+                <a class="nav__dropdown-link" href="./payment.html">Оплата</a>
+                <a class="nav__dropdown-link" href="./faq.html">FAQ</a>
+              </div>
+            </div>
+          </ul>
+
+          <div class="nav__actions">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <a class="nav__actions-logo" href="./index.html">
+              <img src="./src/assets/logo.svg" alt="logo" />
+            </a>
+            <a class="fav__products" href="./empty-featured-products.html"
+              ><i class="fa-regular fa-star"></i
+            ></a>
+            <a href="#"><i class="fa-regular fa-user"></i></a>
+            <div class="nav__actions-shop">
+              <a href="./empty-cart.html"
+                ><i class="fa-solid fa-bag-shopping"></i
+              ></a>
+              <p>11 899 ₽</p>
+              <span>7</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Catalogue -->
+    <section class="catalogue">
+      <div class="container">
+        <div class="catalogue__intro">
+          <a href="./index.html">Главная</a>
+          <span>/</span>
+          <p>Каталог товаров</p>
+          <span>/</span>
+          <a href="./catalogue.html">Обувь</a>
+        </div>
+
+        <div class="catalogue__wrapper">
+          <div class="catalogue__sidebar">
+            <div class="catalogue__sidebar-accordion">
+              <div
+                class="catalogue__sidebar-accordion_content catalogue__categories"
+              >
+                <div class="catalogue__sidebar-accordion_header">
+                  <h5>Категории</h5>
+                  <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="catalogue__sidebar-accordion_footer">
+                  <p>Кроссовки</p>
+                  <p>Кеды</p>
+                  <p>Лофферы</p>
+                  <p>Сандали</p>
+                  <p>Шлепки</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalogue__sidebar-accordion">
+              <div
+                class="catalogue__sidebar-accordion_content catalogue__categories"
+              >
+                <div class="catalogue__sidebar-accordion_header">
+                  <h5>Фильтр по цене</h5>
+                  <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="catalogue__sidebar-accordion_footer">
+                  <div class="catalogue__sidebar-accordion-filter">
+                    <input type="number" placeholder="10 ₽" />
+                    <span>-</span>
+                    <input type="number" placeholder="1000 ₽" />
+                  </div>
+                  <input type="range" />
+                </div>
+              </div>
+            </div>
+
+            <div class="catalogue__sidebar-accordion">
+              <div class="catalogue__sidebar-accordion_content">
+                <div class="catalogue__sidebar-accordion_header">
+                  <h5>Размеры (EU)</h5>
+                  <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="catalogue__sidebar-accordion_footer">
+                  <span>36</span>
+                  <span>36.5</span>
+                  <span>37</span>
+                  <span>37.5</span>
+                  <span>38</span>
+                  <span>38.5</span>
+                  <span>39</span>
+                  <span>39.5</span>
+                  <span>40</span>
+                  <span>40.5</span>
+                  <span>41</span>
+                  <span>41.5</span>
+                  <span>42</span>
+                  <span>42.5</span>
+                  <span>43</span>
+                  <span>43.5</span>
+                  <span>44</span>
+                  <span>44.5</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalogue__sidebar-accordion">
+              <div class="catalogue__sidebar-accordion_content">
+                <div class="catalogue__sidebar-accordion_header">
+                  <h5>Бренды</h5>
+                  <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="catalogue__sidebar-accordion_footer">
+                  <label>
+                    <input type="checkbox" />
+                    <span>Adidas</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Ammity</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>AppleGate</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Basic Fitness</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>BH Fitness</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Body Craft</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Bronze Gym</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalogue__sidebar-accordion">
+              <div class="catalogue__sidebar-accordion_content">
+                <div class="catalogue__sidebar-accordion_header">
+                  <h5>Модель</h5>
+                  <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="catalogue__sidebar-accordion_footer">
+                  <label>
+                    <input type="checkbox" />
+                    <span>Air Force 1 High</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Air Force 1 Low</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Air Force 1 Mid</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Air Humara</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Air Jordan 1 Acclimate</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Air Jordan 1 AJKO</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Air Jordan 1 High</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalogue__sidebar-accordion">
+              <div class="catalogue__sidebar-accordion_content">
+                <div class="catalogue__sidebar-accordion_header">
+                  <h5>Цвет</h5>
+                  <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="catalogue__sidebar-accordion_footer">
+                  <p>
+                    <span></span>
+                    Серый
+                  </p>
+                  <p>
+                    <span></span>
+                    Белый
+                  </p>
+                  <p>
+                    <span></span>
+                    Синий
+                  </p>
+                  <p>
+                    <span></span>
+                    Голубой
+                  </p>
+                  <p>
+                    <span></span>
+                    Желтый
+                  </p>
+                  <p>
+                    <span></span>
+                    Зеленый
+                  </p>
+                  <p>
+                    <span></span>
+                    Коричневый
+                  </p>
+                  <p>
+                    <span></span>
+                    Красный
+                  </p>
+                  <p>
+                    <span></span>
+                    Оранжевый
+                  </p>
+                  <p>
+                    <span></span>
+                    Бежевый
+                  </p>
+                  <p>
+                    <span></span>
+                    Бордовый
+                  </p>
+                  <p>
+                    <span></span>
+                    Кремовый
+                  </p>
+                  <p>
+                    <span></span>
+                    Молочный
+                  </p>
+                  <p>
+                    <span></span>
+                    Фиолетовый
+                  </p>
+                  <p>
+                    <span></span>
+                    Черный
+                  </p>
+                  <p>
+                    <span></span>
+                    Розовый
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <a class="catalogue__sidebar-reset_filters">
+              <i class="fa-solid fa-xmark"></i>
+              <span>Сбросить все фильтры</span>
+            </a>
+
+            <div class="catalogue__sidebar-sport_clothes">
+              <img
+                src="./src/assets/sidebar-portrait.png"
+                alt="sidebar-portrait image"
+              />
+
+              <div class="catalogue__sidebar-sport_content">
+                <h4>Спортивная одежда</h4>
+                <a href="#">перейти</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="catalogue__sidebar catalogue__sidebar-md">
+            <div class="catalogue__sidebar-accordion">
+              <div
+                class="catalogue__sidebar-accordion_content catalogue__categories"
+              >
+                <div class="catalogue__sidebar-accordion_header">
+                  <h5>Категории</h5>
+                  <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="catalogue__sidebar-accordion_footer">
+                  <p>Кроссовки</p>
+                  <p>Кеды</p>
+                  <p>Лофферы</p>
+                  <p>Сандали</p>
+                  <p>Шлепки</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalogue__sidebar-accordion">
+              <div
+                class="catalogue__sidebar-accordion_content catalogue__categories"
+              >
+                <div class="catalogue__sidebar-accordion_header">
+                  <h5>Фильтр по цене</h5>
+                  <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="catalogue__sidebar-accordion_footer">
+                  <div class="catalogue__sidebar-accordion-filter">
+                    <input type="number" placeholder="10 ₽" />
+                    <span>-</span>
+                    <input type="number" placeholder="1000 ₽" />
+                  </div>
+                  <input type="range" />
+                </div>
+              </div>
+            </div>
+
+            <div class="catalogue__sidebar-accordion">
+              <div class="catalogue__sidebar-accordion_content">
+                <div class="catalogue__sidebar-accordion_header">
+                  <h5>Размеры (EU)</h5>
+                  <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="catalogue__sidebar-accordion_footer">
+                  <span>36</span>
+                  <span>36.5</span>
+                  <span>37</span>
+                  <span>37.5</span>
+                  <span>38</span>
+                  <span>38.5</span>
+                  <span>39</span>
+                  <span>39.5</span>
+                  <span>40</span>
+                  <span>40.5</span>
+                  <span>41</span>
+                  <span>41.5</span>
+                  <span>42</span>
+                  <span>42.5</span>
+                  <span>43</span>
+                  <span>43.5</span>
+                  <span>44</span>
+                  <span>44.5</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalogue__sidebar-accordion">
+              <div class="catalogue__sidebar-accordion_content">
+                <div class="catalogue__sidebar-accordion_header">
+                  <h5>Бренды</h5>
+                  <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="catalogue__sidebar-accordion_footer">
+                  <label>
+                    <input type="checkbox" />
+                    <span>Adidas</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Ammity</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>AppleGate</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Basic Fitness</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>BH Fitness</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Body Craft</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Bronze Gym</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalogue__sidebar-accordion">
+              <div class="catalogue__sidebar-accordion_content">
+                <div class="catalogue__sidebar-accordion_header">
+                  <h5>Модель</h5>
+                  <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="catalogue__sidebar-accordion_footer">
+                  <label>
+                    <input type="checkbox" />
+                    <span>Air Force 1 High</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Air Force 1 Low</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Air Force 1 Mid</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Air Humara</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Air Jordan 1 Acclimate</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Air Jordan 1 AJKO</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Air Jordan 1 High</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalogue__sidebar-accordion">
+              <div class="catalogue__sidebar-accordion_content">
+                <div class="catalogue__sidebar-accordion_header">
+                  <h5>Цвет</h5>
+                  <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="catalogue__sidebar-accordion_footer">
+                  <p>
+                    <span></span>
+                    Серый
+                  </p>
+                  <p>
+                    <span></span>
+                    Белый
+                  </p>
+                  <p>
+                    <span></span>
+                    Синий
+                  </p>
+                  <p>
+                    <span></span>
+                    Голубой
+                  </p>
+                  <p>
+                    <span></span>
+                    Желтый
+                  </p>
+                  <p>
+                    <span></span>
+                    Зеленый
+                  </p>
+                  <p>
+                    <span></span>
+                    Коричневый
+                  </p>
+                  <p>
+                    <span></span>
+                    Красный
+                  </p>
+                  <p>
+                    <span></span>
+                    Оранжевый
+                  </p>
+                  <p>
+                    <span></span>
+                    Бежевый
+                  </p>
+                  <p>
+                    <span></span>
+                    Бордовый
+                  </p>
+                  <p>
+                    <span></span>
+                    Кремовый
+                  </p>
+                  <p>
+                    <span></span>
+                    Молочный
+                  </p>
+                  <p>
+                    <span></span>
+                    Фиолетовый
+                  </p>
+                  <p>
+                    <span></span>
+                    Черный
+                  </p>
+                  <p>
+                    <span></span>
+                    Розовый
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <a class="catalogue__sidebar-reset_filters">
+              <i class="fa-solid fa-xmark"></i>
+              <span>Сбросить все фильтры</span>
+            </a>
+
+            <span class="catalogue__sidebar-md_close"
+              ><i class="fa-solid fa-x"></i
+            ></span>
+          </div>
+
+          <!-- <div class="catalogue__sidebar catalogue__sidebar-md">
+            <span class="catalogue__sidebar-md_close"
+              ><i class="fa-solid fa-x"></i
+            ></span>
+            <div class="catalogue__sidebar-accordion">
+              <div
+                class="catalogue__sidebar-accordion_content catalogue__categories"
+              >
+                <div class="catalogue__sidebar-accordion_header">
+                  <h5>Категории</h5>
+                  <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="catalogue__sidebar-accordion_footer">
+                  <p>Кроссовки</p>
+                  <p>Кеды</p>
+                  <p>Лофферы</p>
+                  <p>Сандали</p>
+                  <p>Шлепки</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalogue__sidebar-accordion">
+              <div
+                class="catalogue__sidebar-accordion_content catalogue__categories"
+              >
+                <div class="catalogue__sidebar-accordion_header">
+                  <h5>Фильтр по цене</h5>
+                  <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="catalogue__sidebar-accordion_footer">
+                  <div class="catalogue__sidebar-accordion-filter">
+                    <input type="number" placeholder="10 ₽" />
+                    <span>-</span>
+                    <input type="number" placeholder="1000 ₽" />
+                  </div>
+                  <input type="range" />
+                </div>
+              </div>
+            </div>
+
+            <div class="catalogue__sidebar-accordion">
+              <div class="catalogue__sidebar-accordion_content">
+                <div class="catalogue__sidebar-accordion_header">
+                  <h5>Размеры (EU)</h5>
+                  <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="catalogue__sidebar-accordion_footer">
+                  <span>36</span>
+                  <span>36.5</span>
+                  <span>37</span>
+                  <span>37.5</span>
+                  <span>38</span>
+                  <span>38.5</span>
+                  <span>39</span>
+                  <span>39.5</span>
+                  <span>40</span>
+                  <span>40.5</span>
+                  <span>41</span>
+                  <span>41.5</span>
+                  <span>42</span>
+                  <span>42.5</span>
+                  <span>43</span>
+                  <span>43.5</span>
+                  <span>44</span>
+                  <span>44.5</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalogue__sidebar-accordion">
+              <div class="catalogue__sidebar-accordion_content">
+                <div class="catalogue__sidebar-accordion_header">
+                  <h5>Бренды</h5>
+                  <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="catalogue__sidebar-accordion_footer">
+                  <label>
+                    <input type="checkbox" />
+                    <span>Adidas</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Ammity</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>AppleGate</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Basic Fitness</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>BH Fitness</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Body Craft</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Bronze Gym</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalogue__sidebar-accordion">
+              <div class="catalogue__sidebar-accordion_content">
+                <div class="catalogue__sidebar-accordion_header">
+                  <h5>Модель</h5>
+                  <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="catalogue__sidebar-accordion_footer">
+                  <label>
+                    <input type="checkbox" />
+                    <span>Air Force 1 High</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Air Force 1 Low</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Air Force 1 Mid</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Air Humara</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Air Jordan 1 Acclimate</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Air Jordan 1 AJKO</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Air Jordan 1 High</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalogue__sidebar-accordion">
+              <div class="catalogue__sidebar-accordion_content">
+                <div class="catalogue__sidebar-accordion_header">
+                  <h5>Цвет</h5>
+                  <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="catalogue__sidebar-accordion_footer">
+                  <p>
+                    <span></span>
+                    Серый
+                  </p>
+                  <p>
+                    <span></span>
+                    Белый
+                  </p>
+                  <p>
+                    <span></span>
+                    Синий
+                  </p>
+                  <p>
+                    <span></span>
+                    Голубой
+                  </p>
+                  <p>
+                    <span></span>
+                    Желтый
+                  </p>
+                  <p>
+                    <span></span>
+                    Зеленый
+                  </p>
+                  <p>
+                    <span></span>
+                    Коричневый
+                  </p>
+                  <p>
+                    <span></span>
+                    Красный
+                  </p>
+                  <p>
+                    <span></span>
+                    Оранжевый
+                  </p>
+                  <p>
+                    <span></span>
+                    Бежевый
+                  </p>
+                  <p>
+                    <span></span>
+                    Бордовый
+                  </p>
+                  <p>
+                    <span></span>
+                    Кремовый
+                  </p>
+                  <p>
+                    <span></span>
+                    Молочный
+                  </p>
+                  <p>
+                    <span></span>
+                    Фиолетовый
+                  </p>
+                  <p>
+                    <span></span>
+                    Черный
+                  </p>
+                  <p>
+                    <span></span>
+                    Розовый
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <a class="catalogue__sidebar-reset_filters">
+              <i class="fa-solid fa-xmark"></i>
+              <span>Сбросить все фильтры</span>
+            </a>
+          </div> -->
+
+          <div class="catalogue__cards">
+            <div class="catalogue__cards-intro">
+              <div class="catalogue__cards-intro_title">
+                <h2>Обувь</h2>
+                <span>1 746 товаров</span>
+              </div>
+              <label class="catalogue__cards-intro_sort">
+                <span>Сортировать по</span>
+                <select>
+                  <option value="От дешевых к дорогим">
+                    От дешевых к дорогим
+                  </option>
+                  <option value="От дорогих к дешевым">
+                    От дорогих к дешевым
+                  </option>
+                  <option value="По популярности">По популярности</option>
+                  <option value="По новизне">По новизне</option>
+                  <option value="По рейтингу">По рейтингу</option>
+                  <option value="По скидке">По скидке</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="catalogue__filters-md">
+              <div class="catalogue__filters-md_category">
+                <button>
+                  Категории <i class="fa-solid fa-angle-down"></i>
+                </button>
+
+                <div class="category-md__content">
+                  <a href="#">Кроссовки</a>
+                  <a href="#">Кеды</a>
+                  <a href="#">Лофферы</a>
+                  <a href="#">Сандали</a>
+                  <a href="#">Шлепки</a>
+                </div>
+              </div>
+              <button class="catalogue__filters-md_filter">
+                Открыть Фильтры
+                <i class="fa-solid fa-angle-down"></i>
+              </button>
+            </div>
+
+            <div class="catalogue__cards-products">
+              <div class="catalogue__cards-product">
+                <a href="#" class="catalogue__product-img">
+                  <img src="./src/assets/sneaker1.png" alt="sneaker image" />
+                </a>
+                <a
+                  href="./empty-featured-products.html"
+                  class="catalogue__product-add"
+                >
+                  <i class="fa-regular fa-star"></i>
+                </a>
+                <h3>Nike Court Zoom Cage 2</h3>
+                <p>от 4 699 ₽</p>
+              </div>
+
+              <div class="catalogue__cards-product">
+                <a href="#" class="catalogue__product-img">
+                  <img src="./src/assets/sneaker2.png" alt="sneaker image" />
+                </a>
+                <a
+                  href="./empty-featured-products.html"
+                  class="catalogue__product-add"
+                >
+                  <i class="fa-regular fa-star"></i>
+                </a>
+                <h3>Air Force 1 Ultra</h3>
+                <p>от 4 699 ₽</p>
+              </div>
+
+              <div class="catalogue__cards-product">
+                <a href="#" class="catalogue__product-img">
+                  <img src="./src/assets/sneaker3.png" alt="sneaker image" />
+                </a>
+                <a
+                  href="./empty-featured-products.html"
+                  class="catalogue__product-add"
+                >
+                  <i class="fa-regular fa-star"></i>
+                </a>
+                <h3>Air Force 1 Ultra Flyknit</h3>
+                <p>от 4 699 ₽</p>
+              </div>
+
+              <div class="catalogue__cards-product">
+                <a href="#" class="catalogue__product-img">
+                  <img src="./src/assets/sneaker4.png" alt="sneaker image" />
+                </a>
+                <a
+                  href="./empty-featured-products.html"
+                  class="catalogue__product-add"
+                >
+                  <i class="fa-regular fa-star"></i>
+                </a>
+                <h3>Nike Court Zoom Cage 2</h3>
+                <p>от 4 699 ₽</p>
+              </div>
+
+              <div class="catalogue__cards-product">
+                <a href="#" class="catalogue__product-img">
+                  <img src="./src/assets/sneaker5.png" alt="sneaker image" />
+                </a>
+                <a
+                  href="./empty-featured-products.html"
+                  class="catalogue__product-add"
+                >
+                  <i class="fa-regular fa-star"></i>
+                </a>
+                <h3>Air Force 1 Ultra</h3>
+                <p>от 4 699 ₽</p>
+              </div>
+
+              <div class="catalogue__cards-product">
+                <a href="#" class="catalogue__product-img">
+                  <img src="./src/assets/sneaker6.png" alt="sneaker image" />
+                </a>
+                <a
+                  href="./empty-featured-products.html"
+                  class="catalogue__product-add"
+                >
+                  <i class="fa-regular fa-star"></i>
+                </a>
+                <h3>Air Force 1 Ultra Flyknit</h3>
+                <p>от 4 699 ₽</p>
+              </div>
+
+              <div class="catalogue__cards-product">
+                <a href="#" class="catalogue__product-img">
+                  <img src="./src/assets/sneaker7.png" alt="sneaker image" />
+                </a>
+                <a
+                  href="./empty-featured-products.html"
+                  class="catalogue__product-add"
+                >
+                  <i class="fa-regular fa-star"></i>
+                </a>
+                <h3>Nike Court Zoom Cage 2</h3>
+                <p>от 4 699 ₽</p>
+              </div>
+
+              <div class="catalogue__cards-product">
+                <a href="#" class="catalogue__product-img">
+                  <img src="./src/assets/sneaker8.png" alt="sneaker image" />
+                </a>
+                <a
+                  href="./empty-featured-products.html"
+                  class="catalogue__product-add"
+                >
+                  <i class="fa-regular fa-star"></i>
+                </a>
+                <h3>Air Force 1 Ultra</h3>
+                <p>от 4 699 ₽</p>
+              </div>
+
+              <div class="catalogue__cards-product">
+                <a href="#" class="catalogue__product-img">
+                  <img src="./src/assets/sneaker9.png" alt="sneaker image" />
+                </a>
+                <a
+                  href="./empty-featured-products.html"
+                  class="catalogue__product-add"
+                >
+                  <i class="fa-regular fa-star"></i>
+                </a>
+                <h3>Air Force 1 Ultra Flyknit</h3>
+                <p>от 4 699 ₽</p>
+              </div>
+
+              <div class="catalogue__cards-product">
+                <a href="#" class="catalogue__product-img">
+                  <img src="./src/assets/sneaker10.png" alt="sneaker image" />
+                </a>
+                <a
+                  href="./empty-featured-products.html"
+                  class="catalogue__product-add"
+                >
+                  <i class="fa-regular fa-star"></i>
+                </a>
+                <h3>Nike Court Zoom Cage 2</h3>
+                <p>от 4 699 ₽</p>
+              </div>
+
+              <div class="catalogue__cards-product">
+                <a href="#" class="catalogue__product-img">
+                  <img src="./src/assets/sneaker11.png" alt="sneaker image" />
+                </a>
+                <a
+                  href="./empty-featured-products.html"
+                  class="catalogue__product-add"
+                >
+                  <i class="fa-regular fa-star"></i>
+                </a>
+                <h3>Air Force 1 Ultra</h3>
+                <p>от 4 699 ₽</p>
+              </div>
+
+              <div class="catalogue__cards-product">
+                <a href="#" class="catalogue__product-img">
+                  <img src="./src/assets/sneaker12.png" alt="sneaker image" />
+                </a>
+                <a
+                  href="./empty-featured-products.html"
+                  class="catalogue__product-add"
+                >
+                  <i class="fa-regular fa-star"></i>
+                </a>
+                <h3>Air Force 1 Ultra Flyknit</h3>
+                <p>от 4 699 ₽</p>
+              </div>
+
+              <div class="catalogue__cards-product">
+                <a href="#" class="catalogue__product-img">
+                  <img src="./src/assets/sneaker13.png" alt="sneaker image" />
+                </a>
+                <a
+                  href="./empty-featured-products.html"
+                  class="catalogue__product-add"
+                >
+                  <i class="fa-regular fa-star"></i>
+                </a>
+                <h3>Nike Court Zoom Cage 2</h3>
+                <p>от 4 699 ₽</p>
+              </div>
+
+              <div class="catalogue__cards-product">
+                <a href="#" class="catalogue__product-img">
+                  <img src="./src/assets/sneaker14.png" alt="sneaker image" />
+                </a>
+                <a
+                  href="./empty-featured-products.html"
+                  class="catalogue__product-add"
+                >
+                  <i class="fa-regular fa-star"></i>
+                </a>
+                <h3>Air Force 1 Ultra</h3>
+                <p>от 4 699 ₽</p>
+              </div>
+
+              <div class="catalogue__cards-product">
+                <a href="#" class="catalogue__product-img">
+                  <img src="./src/assets/sneaker15.png" alt="sneaker image" />
+                </a>
+                <a
+                  href="./empty-featured-products.html"
+                  class="catalogue__product-add"
+                >
+                  <i class="fa-regular fa-star"></i>
+                </a>
+                <h3>Air Force 1 Ultra Flyknit</h3>
+                <p>от 4 699 ₽</p>
+              </div>
+
+              <div class="catalogue__cards-product">
+                <a href="#" class="catalogue__product-img">
+                  <img src="./src/assets/sneaker16.png" alt="sneaker image" />
+                </a>
+                <a
+                  href="./empty-featured-products.html"
+                  class="catalogue__product-add"
+                >
+                  <i class="fa-regular fa-star"></i>
+                </a>
+                <h3>Nike Court Zoom Cage 2</h3>
+                <p>от 4 699 ₽</p>
+              </div>
+
+              <div class="catalogue__cards-product">
+                <a href="#" class="catalogue__product-img">
+                  <img src="./src/assets/sneaker17.png" alt="sneaker image" />
+                </a>
+                <a
+                  href="./empty-featured-products.html"
+                  class="catalogue__product-add"
+                >
+                  <i class="fa-regular fa-star"></i>
+                </a>
+                <h3>Air Force 1 Ultra</h3>
+                <p>от 4 699 ₽</p>
+              </div>
+
+              <div class="catalogue__cards-product">
+                <a href="#" class="catalogue__product-img">
+                  <img src="./src/assets/sneaker18.png" alt="sneaker image" />
+                </a>
+                <a
+                  href="./empty-featured-products.html"
+                  class="catalogue__product-add"
+                >
+                  <i class="fa-regular fa-star"></i>
+                </a>
+                <h3>Air Force 1 Ultra Flyknit</h3>
+                <p>от 4 699 ₽</p>
+              </div>
+
+              <div class="catalogue__cards-product">
+                <a href="#" class="catalogue__product-img">
+                  <img src="./src/assets/sneaker19.png" alt="sneaker image" />
+                </a>
+                <a
+                  href="./empty-featured-products.html"
+                  class="catalogue__product-add"
+                >
+                  <i class="fa-regular fa-star"></i>
+                </a>
+                <h3>Nike Court Zoom Cage 2</h3>
+                <p>от 4 699 ₽</p>
+              </div>
+
+              <div class="catalogue__cards-product">
+                <a href="#" class="catalogue__product-img">
+                  <img src="./src/assets/sneaker20.png" alt="sneaker image" />
+                </a>
+                <a
+                  href="./empty-featured-products.html"
+                  class="catalogue__product-add"
+                >
+                  <i class="fa-regular fa-star"></i>
+                </a>
+                <h3>Air Force 1 Ultra</h3>
+                <p>от 4 699 ₽</p>
+              </div>
+
+              <div class="catalogue__cards-product">
+                <a href="#" class="catalogue__product-img">
+                  <img src="./src/assets/sneaker21.png" alt="sneaker image" />
+                </a>
+                <a
+                  href="./empty-featured-products.html"
+                  class="catalogue__product-add"
+                >
+                  <i class="fa-regular fa-star"></i>
+                </a>
+                <h3>Air Force 1 Ultra Flyknit</h3>
+                <p>от 4 699 ₽</p>
+              </div>
+            </div>
+
+            <div class="catalogue__cards-pagination">
+              <span class="catalogue__cards-pagination_controls">
+                <i class="fa-solid fa-arrow-left"></i>
+              </span>
+              <span class="catalogue__cards-pagination_number">1</span>
+              <span class="catalogue__cards-pagination_number">2</span>
+              <span class="catalogue__cards-pagination_number">3</span>
+              <span class="catalogue__cards-pagination_number">4</span>
+              <span class="catalogue__cards-pagination_number">5</span>
+              <span class="catalogue__cards-pagination_number">...</span>
+              <span class="catalogue__cards-pagination_number">124</span>
+              <span class="catalogue__cards-pagination_controls">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </div>
+
+            <div class="catalogue__cards-footer">
+              <picture>
+                <source
+                  media="(min-width:440px)"
+                  srcset="./src/assets/portrait-md.png"
+                />
+                <img
+                  src="./src/assets/sidebar-portrait.png"
+                  alt="sports clothes image"
+                />
+              </picture>
+
+              <div class="catalogue__cards-footer_content">
+                <h3>Спортивная одежда</h3>
+                <a href="#">перейти</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-lg">
+          <div class="footer-lg-catalogue">
+            <h4>Каталог</h4>
+            <a class="footer-lg-catalogue__link" href="#">Одежда</a>
+            <a class="footer-lg-catalogue__link" href="./catalogue.html"
+              >Обувь</a
+            >
+            <a class="footer-lg-catalogue__link" href="#">Аксессуары</a>
+            <a class="footer-lg-catalogue__link" href="#">Расчет стоимости</a>
+            <a href="./index.html">
+              <img src="./src/assets/footer-logo.svg" alt="footer logo" />
+            </a>
+          </div>
+          <div class="footer-lg-information">
+            <h4>Информация</h4>
+            <a class="footer-lg-information__link" href="#">Блог</a>
+            <a class="footer-lg-information__link" href="./contacts.html"
+              >Контакты</a
+            >
+            <a class="footer-lg-information__link" href="#">Доставка</a>
+            <a class="footer-lg-information__link" href="./payment.html"
+              >Оплата</a
+            >
+            <a class="footer-lg-information__link" href="./faq.html">FAQ</a>
+            <a href="#">
+              <img
+                src="./src/assets/footer-info.svg"
+                alt="readycode website icon"
+              />
+            </a>
+          </div>
+          <div class="footer-lg-contacts">
+            <h4>Контакты</h4>
+            <a class="footer-lg-contacts__email" href="mailto:info@xwear.info"
+              >info@xwear.info</a
+            >
+            <a class="footer-lg-contacts__tel" href="tel:+7 993 608 38 85"
+              >+7 993 608 38 85</a
+            >
+            <p class="footer-lg-contacts__social">Мессенджеры</p>
+            <div class="footer-lg-contacts__messengers">
+              <a href="#">
+                <img src="./src/assets/telegram.svg" alt="telegram icon" />
+              </a>
+              <a href="#">
+                <img src="./src/assets/whatsapp.svg" alt="whatsapp icon" />
+              </a>
+            </div>
+            <p class="footer-lg-contacts__social">Наши соц.сети</p>
+            <a href="#">
+              <img src="./src/assets/vkontakte.svg" alt="vkontakte icon" />
+            </a>
+          </div>
+          <div class="footer-lg-news">
+            <h4>Подписка на новости</h4>
+            <p>Будьте в курсе скидок и новостей</p>
+            <form class="footer-lg-news__form">
+              <input type="email" required placeholder="Ваш email" />
+              <button type="submit">
+                <i class="fa-solid fa-angle-right"></i>
+              </button>
+            </form>
+            <p>
+              Подписываясь на рассылку вы соглашатесь с обработкой персональных
+              данных
+            </p>
+            <a class="footer-lg-news__policy" href="./privacy-policy.html">
+              <p>Политика конфиденциальности</p>
+              <p>Пользовательское соглашение</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-md">
+          <div class="footer-md__news">
+            <div class="footer-md__news-intro">
+              <div>
+                <h4>Подписка на новости</h4>
+                <p>Будьте в курсе скидок и новостей</p>
+              </div>
+              <form>
+                <input type="email" placeholder="Ваш email" required />
+                <button type="submit">
+                  <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </form>
+            </div>
+            <p>
+              Подписываясь на рассылку вы соглашатесь с обработкой персональных
+              данных
+            </p>
+            <div class="footer-md__news-bottom">
+              <a href="./index.html">
+                <img src="./src/assets/footer-logo.svg" alt="footer logo" />
+              </a>
+
+              <a href="./privacy-policy.html">
+                <p>Политика конфиденциальности</p>
+                <p>Пользовательское соглашение</p>
+              </a>
+
+              <a href="#">
+                <img
+                  src="./src/assets/footer-info.svg"
+                  alt="readycode website icon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-sm">
+          <a href="./index.html" class="footer-sm__logo">
+            <img src="./src/assets/footer-logo.svg" alt="footer logo" />
+          </a>
+
+          <div class="footer-sm__accordion">
+            <div class="footer-sm__accordion-content">
+              <div class="footer-sm__accordion-content_header">
+                <span>Информация</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <div class="footer-sm__accordion-content-footer">
+                <a href="#">Блог</a>
+                <a href="./contacts.html">Контакты</a>
+                <a href="#">Доставка</a>
+                <a href="./payment.html">Оплата</a>
+                <a href="./faq.html">FAQ</a>
+              </div>
+            </div>
+
+            <div class="footer-sm__accordion-content">
+              <div class="footer-sm__accordion-content_header">
+                <span>Каталог</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <div class="footer-sm__accordion-content-footer">
+                <a href="#">Одежда</a>
+                <a href="./catalogue.html">Обувь</a>
+                <a href="#">Аксессуары</a>
+                <a href="#">Расчет стоимости</a>
+              </div>
+            </div>
+
+            <div class="footer-sm__accordion-content">
+              <div class="footer-sm__accordion-content_header">
+                <span>Контакты</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <div class="footer-sm__accordion-content-footer">
+                <a href="mailto:info@xwear.info">info@xwear.info</a>
+                <a href="tel:+7 993 608 38 85">+7 993 608 38 85</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-sm__messengers">
+            <a href="#">
+              <img src="./src/assets/telegram.svg" alt="telegram icon" />
+            </a>
+            <a href="#">
+              <img src="./src/assets/whatsapp.svg" alt="whatsapp icon" />
+            </a>
+            <a href="#">
+              <img src="./src/assets/vkontakte.svg" alt="vkontakte icon" />
+            </a>
+          </div>
+
+          <h4 class="footer-sm__news-title">Подписка на новости</h4>
+          <p class="footer-sm__news-text">Будьте в курсе скидок и новостей</p>
+
+          <form class="footer-sm__form">
+            <input type="email" required placeholder="Ваш email" />
+            <button type="submit">
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </form>
+
+          <p>
+            Подписываясь на рассылку вы соглашатесь с обработкой персональных
+            данных
+          </p>
+
+          <a href="./privacy-policy.html" class="footer-sm__policy">
+            <p>Политика конфиденциальности</p>
+            <p>Пользовательское соглашение</p>
+          </a>
+
+          <a href="#">
+            <img src="./src/assets/footer-info.svg" alt="readycode icon" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="overlay hidden"></div>
+    <div class="overlaySidebar hidden"></div>
+
+    <!-- Scripts -->
+    <script src="./src/js/navbar.js"></script>
+    <script src="./src/js/footer.js"></script>
+    <script src="./src/js/catalogue.js"></script>
+    <script src=""></script>
+  </body>
+</html>
