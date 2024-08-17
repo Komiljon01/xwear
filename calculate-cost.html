@@ -14,7 +14,7 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./src/css/login.css" />
+    <link rel="stylesheet" href="./src/css/calculate-cost.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -109,90 +109,196 @@
       </div>
     </nav>
 
-    <!-- Login -->
-    <section class="login">
+    <!-- Calculate -->
+    <section class="calculate">
       <div class="container">
-        <div class="login__intro">
+        <div class="calculate__intro">
           <a href="./index.html">Главная</a>
           <span>/</span>
-          <p>Личный кабинет</p>
+          <a href="./calculate-cost.html">Рассчитать стоимость</a>
         </div>
 
-        <h3 class="login__title">Аккаунт</h3>
+        <h3 class="calculate__title">Рассчитать стоимость</h3>
 
-        <div class="login__cards">
-          <div class="login__enter">
-            <h3>Войти</h3>
+        <div class="calculate__wrapper">
+          <div class="calculate__content">
+            <p class="calculate__content-text">
+              Мы ежедневно добавляем новые товары на сайт, но если вам не
+              удалось найти то, что искали, вы всегда можете воспользоваться
+              автоматическим расчетом стоимость заказа на маркетплейсе
+              <b>Poizon</b>, включая комиссию сервиса и доставку. Если у вас еще
+              нет приложения <b>Poizon</b>, тогда можете посмотреть статью
+              справа. В приложении есть любые кроссовки и одежда
+              <b>дешевле на 40%</b>
+              чем в РФ.
+            </p>
+            <p class="calculate__content-text">
+              Если вы не хотите устанавливать приложение, вы всегда можете
+              написать нам в <a href="#">Telegram</a> или
+              <a href="#">WhatsApp</a>, какую вещь хотите купить. Для этого
+              напишите ее название или пришлите фотографию к нам в чат. Наши
+              операторы сами найдут нужный вам товар и рассчитают его стоимость.
+            </p>
 
-            <form class="login__enter-form">
-              <label>
-                <span>Email адрес:</span>
-                <input
-                  type="email"
-                  placeholder="yavasyaivanov@gmail.com"
-                  required
-                />
-              </label>
-
-              <label>
-                <span>Пароль:</span>
-                <input
-                  type="password"
-                  placeholder="*********************"
-                  required
-                />
-              </label>
-
-              <div class="login__enter-form__footer">
-                <label>
-                  <input type="checkbox" />
-                  <span>Запомнить меня</span>
-                </label>
-
-                <a href="./reset-password.html">Забыли пароль?</a>
+            <div class="calculate__app-md">
+              <div>
+                <h4>Как установить приложение Poizon</h4>
+                <p>
+                  Подробная, пошаговая инструкция по установке приложения Poizon
+                </p>
+                <a href="#">
+                  Читать полностью
+                  <i class="fa-solid fa-angle-right"></i>
+                </a>
               </div>
+              <img src="./src/assets/poizon-app.png" alt="poizon app image" />
+            </div>
 
-              <button type="submit" class="login__enter-form__btn btn">
-                Войти
+            <div class="calculate__content-buttons">
+              <button class="calculate__content-btn calcBtnactive">
+                Калькулятор
+                <i class="fa-solid fa-angle-right"></i>
               </button>
-            </form>
+              <button class="calculate__content-btn">
+                Написать менеджеру
+                <i class="fa-solid fa-angle-right"></i>
+              </button>
+            </div>
+
+            <div class="calculate__content-form">
+              <div class="calculate__content-form_item">
+                <form>
+                  <h4>Ссылка на товар в Poizon</h4>
+
+                  <label>
+                    <span>Вставьте ссылку сюда:</span>
+                    <input type="text" placeholder="https://" required />
+                  </label>
+
+                  <h4>Размер</h4>
+
+                  <label>
+                    <span>Укажите размер:</span>
+                    <input type="number" placeholder="43" required />
+                  </label>
+
+                  <h4>Выберите категорию</h4>
+                  <p class="calculate__category-text">
+                    Выберите категорию товара для того, чтобы мы смогли
+                    правильно рассчитать цену доставки.
+                  </p>
+
+                  <label>
+                    <select required>
+                      <option disabled>Выбрать категорию товара</option>
+                      <option value="Одежда">Одежда</option>
+                      <option value="Обувь">Обувь</option>
+                      <option value="Аксессуары">Аксессуары</option>
+                      <option value="Расчет стоимости">Расчет стоимости</option>
+                    </select>
+                  </label>
+
+                  <button class="calculate__category-btn btn">
+                    Рассчитать стоимость
+                    <i class="fa-solid fa-angle-right"></i>
+                  </button>
+                </form>
+
+                <p class="calculate-cost-total">
+                  Итоговая стоимость
+                  <span>531 ¥</span>
+                </p>
+              </div>
+              <div class="calculate__content-form_item">
+                <h3>Напишите нам в мессенджеры</h3>
+
+                <div class="calculate__content-form_messengers">
+                  <a href="#">
+                    <img src="./src/assets/telegram.svg" alt="telegram icon" />
+                    <span>Написать в Telegram</span>
+                  </a>
+                  <a href="#">
+                    <img src="./src/assets/whatsapp.svg" alt="whatsapp icon" />
+                    <span>Написать в whatsapp</span>
+                  </a>
+                </div>
+
+                <h3>или заполните форму:</h3>
+
+                <form>
+                  <label>
+                    <span>Введите название товара:</span>
+                    <input
+                      type="text"
+                      placeholder="Например кроссовки Nike Air Max"
+                      required
+                    />
+                  </label>
+
+                  <label>
+                    <span>Размер:</span>
+                    <input
+                      type="text"
+                      placeholder="Например EU 38,5"
+                      required
+                    />
+                  </label>
+
+                  <div class="calculate__content-form_divider">
+                    <label>
+                      <span>Ваше имя:</span>
+                      <input type="text" placeholder="Введите имя" required />
+                    </label>
+                    <label>
+                      <span>Номер телефона:</span>
+                      <input
+                        type="tel"
+                        placeholder="+7 (000) 000 - 00 - 00"
+                        required
+                      />
+                    </label>
+                  </div>
+
+                  <label>
+                    <span>Email адрес:</span>
+                    <input
+                      type="email"
+                      placeholder="example@myemail.com"
+                      required
+                    />
+                  </label>
+
+                  <label>
+                    <input type="file" required />
+                  </label>
+
+                  <div class="calculate__content-form_footer">
+                    <button class="btn">
+                      отправить заявку
+                      <i class="fa-solid fa-angle-right"></i>
+                    </button>
+
+                    <p>
+                      Нажимая кнопку Отправить заявку” вы соглашаетесь с
+                      <a href="./privacy-policy.html">
+                        Политикой конфиденциальности
+                      </a>
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-
-          <div class="login__register">
-            <h3>Регистрация</h3>
-
-            <form class="login__register-form">
-              <label>
-                <span>Email адрес:</span>
-                <input
-                  type="email"
-                  placeholder="yavasyaivanov@gmail.com"
-                  required
-                />
-              </label>
-
-              <label>
-                <span>Пароль:</span>
-                <input
-                  type="password"
-                  placeholder="*********************"
-                  required
-                />
-              </label>
-
-              <label>
-                <span>Повторите пароль:</span>
-                <input
-                  type="password"
-                  placeholder="*********************"
-                  required
-                />
-              </label>
-
-              <button type="submit" class="login__register-form__btn btn">
-                Зарегистрироваться
-              </button>
-            </form>
+          <div class="calculate__app">
+            <h4>Как установить приложение Poizon</h4>
+            <p>
+              Подробная, пошаговая инструкция по установке приложения Poizon
+            </p>
+            <a href="#">
+              Читать полностью
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+            <img src="./src/assets/poizon-app.png" alt="poizon app image" />
           </div>
         </div>
       </div>
@@ -205,7 +311,9 @@
           <div class="footer-lg-catalogue">
             <h4>Каталог</h4>
             <a class="footer-lg-catalogue__link" href="#">Одежда</a>
-            <a class="footer-lg-catalogue__link" href="./catalogue.html">Обувь</a>
+            <a class="footer-lg-catalogue__link" href="./catalogue.html"
+              >Обувь</a
+            >
             <a class="footer-lg-catalogue__link" href="#">Аксессуары</a>
             <a class="footer-lg-catalogue__link" href="./calculate-cost.html">Расчет стоимости</a>
             <a href="./index.html">
@@ -219,7 +327,9 @@
               >Контакты</a
             >
             <a class="footer-lg-information__link" href="#">Доставка</a>
-            <a class="footer-lg-information__link" href="./payment.html">Оплата</a>
+            <a class="footer-lg-information__link" href="./payment.html"
+              >Оплата</a
+            >
             <a class="footer-lg-information__link" href="./faq.html">FAQ</a>
             <a href="#">
               <img
@@ -396,6 +506,7 @@
 
     <!-- Scripts -->
     <script src="./src/js/navbar.js"></script>
+    <script src="./src/js/calculate.js"></script>
     <script src="./src/js/footer.js"></script>
   </body>
 </html>
