@@ -5,6 +5,7 @@
 @import "../components/navbar";
 @import "../components/_footer";
 
+// Calculate
 .calculate {
   padding: 14px 0 100px;
 
@@ -286,7 +287,7 @@
           }
 
           input {
-            color: #cdcfdb;
+            color: #000;
             font-size: 13px;
             font-weight: 400;
             line-height: 22px;
@@ -422,6 +423,100 @@
       top: -105px;
     }
   }
+}
+
+// Calculate modal
+.calculate__modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+
+  &-wrapper {
+    padding: 0 25px 45px;
+    position: relative;
+    width: 434px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+
+    .calculate__modal-close {
+      position: absolute;
+      top: -25px;
+      right: -25px;
+      color: #fff;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    span {
+      top: -22px;
+      position: absolute;
+      width: 79px;
+      height: 79px;
+      background-color: #49d0ff;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 25px;
+    }
+
+    h4 {
+      margin-top: 75px;
+      color: $primary;
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 28px;
+      letter-spacing: 0%;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: #303030;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 27px;
+      letter-spacing: 0%;
+      text-align: center;
+    }
+
+    button {
+      padding: 23px 102px;
+      display: inline-block;
+      color: #000;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 20px;
+      letter-spacing: 0%;
+      text-align: left;
+      text-transform: uppercase;
+      outline: none;
+      border: 1px solid #8c8f96;
+      border-radius: 6px;
+      background-color: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #000;
+        color: #fff;
+        border-color: #000;
+      }
+    }
+  }
+}
+
+.overlay__calculate {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9;
 }
 
 @media screen and (max-width: 850px) {
@@ -573,9 +668,9 @@
         }
 
         .calculate__content-form_footer {
-            button {
-                margin: 0 auto;
-            }
+          button {
+            margin: 0 auto;
+          }
 
           p {
             text-align: center;
@@ -600,6 +695,44 @@
 
       img {
         margin-left: auto;
+      }
+    }
+  }
+
+  .calculate__modal {
+    width: 100%;
+
+    &-wrapper {
+      padding: 0 10px 20px;
+      width: 100%;
+      gap: 10px;
+
+      .calculate__modal-close {
+        display: none;
+      }
+
+      span {
+        top: -22px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+      }
+
+      h4 {
+        margin-top: 35px;
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      button {
+        width: 80%;
+        padding: 10px;
+        text-align: center;
       }
     }
   }

@@ -40,7 +40,9 @@
             <li class="nav__links">
               Бренды <i class="fa-solid fa-angle-down"></i>
             </li>
-            <a class="nav__links" href="./calculate-cost.html">Расчет стоимости</a>
+            <a class="nav__links" href="./calculate-cost.html"
+              >Расчет стоимости</a
+            >
             <div class="nav__dropdown">
               <button class="nav__dropdown-btn">
                 Информация <i class="fa-solid fa-angle-down"></i>
@@ -71,7 +73,9 @@
             <li class="nav__links">
               Бренды <i class="fa-solid fa-angle-down"></i>
             </li>
-            <a class="nav__links" href="./calculate-cost.html">Расчет стоимости</a>
+            <a class="nav__links" href="./calculate-cost.html"
+              >Расчет стоимости</a
+            >
             <div class="nav__dropdown">
               <button class="nav__dropdown-btn">
                 Информация <i class="fa-solid fa-angle-down"></i>
@@ -225,7 +229,7 @@
 
                 <h3>или заполните форму:</h3>
 
-                <form>
+                <form class="manager-form">
                   <label>
                     <span>Введите название товара:</span>
                     <input
@@ -304,6 +308,23 @@
       </div>
     </section>
 
+    <!-- Calculate modal -->
+    <div class="calculate__modal hidden">
+      <div class="container">
+        <div class="calculate__modal-wrapper">
+          <span><i class="fa-solid fa-check"></i></span>
+          <i class="fa-solid fa-xmark calculate__modal-close"></i>
+
+          <h4>Заявка отправлена</h4>
+          <p>
+            Ваша заявка успешно отправлена. Мы свяжемся с Вами в ближайшее время
+            по указанным контактам.
+          </p>
+          <button class="calculate__modal-btn">Закрыть</button>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
@@ -315,7 +336,9 @@
               >Обувь</a
             >
             <a class="footer-lg-catalogue__link" href="#">Аксессуары</a>
-            <a class="footer-lg-catalogue__link" href="./calculate-cost.html">Расчет стоимости</a>
+            <a class="footer-lg-catalogue__link" href="./calculate-cost.html"
+              >Расчет стоимости</a
+            >
             <a href="./index.html">
               <img src="./src/assets/footer-logo.svg" alt="footer logo" />
             </a>
@@ -503,6 +526,7 @@
     </footer>
 
     <div class="overlay hidden"></div>
+    <div class="overlay__calculate hidden"></div>
 
     <!-- Scripts -->
     <script src="./src/js/navbar.js"></script>
