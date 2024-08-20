@@ -1,0 +1,1852 @@
+@font-face {
+  font-family: "RFDewiExpanded";
+  src: url("../../fonts/RFDewiExpanded-Regular.woff2") format("woff2"), url("../../fonts/RFDewiExpanded-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "RFDewiExpanded";
+  src: url("../../fonts/RFDewiExpanded-Semibold.woff2") format("woff2"), url("../../fonts/RFDewiExpanded-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "RFDewiExpanded";
+  src: url("../../fonts/RFDewiExpanded-Bold.woff2") format("woff2"), url("../../fonts/RFDewiExpanded-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "RFDewiExpanded";
+  src: url("../../fonts/RFDewiExtended-Ultrabold.woff2") format("woff2"), url("../../fonts/RFDewiExtended-Ultrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "RFDewiExpanded";
+  src: url("../../fonts/RFDewiExtended-Black.woff2") format("woff2"), url("../../fonts/RFDewiExtended-Black.woff2") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "RFDewiExpanded", sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.btn {
+  width: 251px;
+  border-radius: 5px;
+  background-color: #121214;
+  color: #fff;
+  padding: 23px 27px;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1362px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+@media screen and (max-width: 360px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+.nav {
+  background-color: #121214;
+  height: 100px;
+  padding: 33px 0;
+  color: #fff;
+  display: flex;
+}
+.nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.nav-open, .nav-close {
+  display: none;
+  cursor: pointer;
+}
+.nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+.nav ul .nav__links,
+.nav ul .nav__dropdown-btn {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.nav ul .nav__links i,
+.nav ul .nav__dropdown-btn i {
+  font-size: 10px;
+}
+.nav ul .nav__links:hover,
+.nav ul .nav__dropdown-btn:hover {
+  opacity: 0.7;
+}
+.nav ul .nav__dropdown {
+  position: relative;
+  display: inline-block;
+  transition: display 0.3s ease;
+}
+.nav ul .nav__dropdown-btn {
+  background-color: #121214;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+.nav ul .nav__dropdown-content {
+  width: 275px;
+  display: none;
+  position: absolute;
+  background-color: #121214;
+  z-index: 1;
+  padding: 23px 0 45px 32px;
+  flex-direction: column;
+  row-gap: 45px;
+}
+.nav ul .nav__dropdown-content a {
+  position: relative;
+  color: #d4d4dd;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0%;
+  transition: all 0.2s ease;
+}
+.nav ul .nav__dropdown-content a:hover::before {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  content: "";
+  height: 1px;
+  background-color: #49d0ff;
+  animation: widthFull 0.3s ease forwards;
+}
+@keyframes widthFull {
+  from {
+    width: 0;
+  }
+  to {
+    width: 15%;
+  }
+}
+.nav ul .nav__dropdown:hover .nav__dropdown-content {
+  display: flex;
+}
+.nav .nav__lists-sm {
+  display: none;
+}
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav__actions-logo {
+  display: none;
+}
+.nav__actions i {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.nav__actions i:hover {
+  opacity: 0.7;
+}
+.nav__actions-shop {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.nav__actions-shop p {
+  color: #8c8f96;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 10px;
+  letter-spacing: 0%;
+}
+.nav__actions-shop span {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #49d0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+@media screen and (max-width: 1220px) {
+  .nav ul {
+    gap: 25px;
+  }
+  .nav ul .nav__dropdown-content {
+    row-gap: 30px;
+    padding: 23px;
+  }
+  .nav__actions p,
+  .nav__actions span {
+    display: none;
+  }
+}
+@media screen and (max-width: 1030px) {
+  .nav ul, .nav__actions {
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .nav .wrapper {
+    justify-content: start;
+  }
+  .nav-open {
+    display: block;
+    margin-left: 50px;
+  }
+  .nav .nav__lists {
+    display: none;
+  }
+  .nav .nav__lists-sm {
+    position: fixed;
+    width: 60%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #121214;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 40px;
+    padding: 70px;
+    transform: translateX(-100%);
+  }
+  .nav .nav__lists-sm .nav-close {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+  .nav__actions {
+    margin-left: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .nav ul {
+    width: 70%;
+  }
+  .nav ul .nav__dropdown-content {
+    width: 170px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .nav .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-open, .nav__actions {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 360px) {
+  .nav {
+    height: 80px;
+    padding: 26px 0;
+  }
+  .nav__logo {
+    display: none;
+  }
+  .nav .wrapper {
+    justify-content: start;
+    gap: 36px;
+  }
+  .nav .nav__lists-sm {
+    width: 100%;
+    padding: 67px 44px;
+  }
+  .nav .nav__lists-sm .nav-close {
+    top: 17px;
+    left: 22px;
+  }
+  .nav__actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .nav__actions-logo {
+    display: block;
+  }
+  .nav__actions-shop a {
+    position: relative;
+    transition: opacity 0.3s ease;
+  }
+  .nav__actions-shop a::before {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    content: "7";
+    width: 14px;
+    height: 14px;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #49d0ff;
+    border-radius: 50%;
+  }
+  .nav__actions-shop a:hover::before {
+    opacity: 0.7;
+  }
+}
+.footer {
+  background-color: #121214;
+  padding: 45px 0 51px;
+  color: #dcdce0;
+}
+.footer .footer-lg {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.footer .footer-lg .footer-lg-catalogue,
+.footer .footer-lg .footer-lg-information,
+.footer .footer-lg .footer-lg-contacts,
+.footer .footer-lg .footer-lg-news {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.footer .footer-lg .footer-lg-catalogue h4,
+.footer .footer-lg .footer-lg-information h4,
+.footer .footer-lg .footer-lg-contacts h4,
+.footer .footer-lg .footer-lg-news h4 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 28px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+.footer .footer-lg .footer-lg-catalogue__link,
+.footer .footer-lg .footer-lg-information__link {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0%;
+  transition: opacity 0.3s ease;
+}
+.footer .footer-lg .footer-lg-catalogue__link:hover,
+.footer .footer-lg .footer-lg-information__link:hover {
+  opacity: 0.8;
+}
+.footer .footer-lg .footer-lg-catalogue a:last-child {
+  margin-top: 49px;
+}
+.footer .footer-lg .footer-lg-information a:last-child {
+  margin-top: 29px;
+}
+.footer .footer-lg .footer-lg-contacts__email {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0%;
+  text-decoration-line: underline;
+}
+.footer .footer-lg .footer-lg-contacts__tel {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0%;
+}
+.footer .footer-lg .footer-lg-contacts__social {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 28px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+.footer .footer-lg .footer-lg-contacts__messengers {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+.footer .footer-lg .footer-lg-news h4 + p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0%;
+}
+.footer .footer-lg .footer-lg-news__form {
+  display: flex;
+  align-items: center;
+}
+.footer .footer-lg .footer-lg-news__form input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0%;
+  padding-right: 40px;
+}
+.footer .footer-lg .footer-lg-news__form button {
+  margin-left: -30px;
+  width: 29px;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #121214;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.footer .footer-lg .footer-lg-news__form + p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0%;
+}
+.footer .footer-lg .footer-lg-news__policy {
+  margin-top: 42px;
+}
+.footer .footer-lg .footer-lg-news__policy p {
+  color: #707076;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+}
+.footer .footer-md,
+.footer .footer-sm {
+  display: none;
+}
+.footer .footer-sm__accordion {
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 21px;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+.footer .footer-sm__accordion-content {
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.footer .footer-sm__accordion-content_header {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.footer .footer-sm__accordion-content_header span {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 28px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+.footer .footer-sm__accordion-content_header i {
+  font-size: 14px;
+  color: #fff;
+}
+.footer .footer-sm__accordion-content.open .footer .footer-sm__accordion-content_header {
+  min-height: 35px;
+}
+.footer .footer-sm__accordion-content-footer {
+  height: 0;
+  transition: all 0.2s linear;
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer-sm__accordion-content-footer a {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0%;
+  transition: opacity 0.3s ease;
+}
+.footer .footer-sm__accordion-content-footer a:hover {
+  opacity: 0.8;
+}
+.footer .footer-sm__messengers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.footer .footer-sm__news-title {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 28px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.footer .footer-sm__news-text {
+  color: #dcdce0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin: 9px 0;
+}
+.footer .footer-sm__form {
+  width: 100%;
+  display: flex;
+}
+.footer .footer-sm__form input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0%;
+  padding-right: 40px;
+}
+.footer .footer-sm__form button {
+  margin-left: -30px;
+  width: 29px;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #121214;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.footer .footer-sm__form + p {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin: 15px 0 19px;
+  opacity: 0.8;
+}
+.footer .footer-sm__policy p {
+  color: #707076;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  text-align: center;
+}
+.footer .footer-sm__policy + a {
+  text-align: center;
+  margin-top: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 850px) {
+  .footer .footer-lg {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 38px 0;
+  }
+  .footer .footer-lg {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer .footer-lg .footer-lg-catalogue a:last-of-type,
+  .footer .footer-lg .footer-lg-information a:last-of-type {
+    display: none;
+  }
+  .footer .footer-lg .footer-lg-news {
+    display: none;
+  }
+  .footer .footer-md {
+    display: block;
+    margin-top: 27px;
+  }
+  .footer .footer-md__news-intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px 10px;
+    flex-wrap: wrap;
+  }
+  .footer .footer-md__news-intro h4 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+  }
+  .footer .footer-md__news-intro h4 + p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0%;
+  }
+  .footer .footer-md__news-intro form {
+    max-width: 320px;
+    width: 100%;
+    display: flex;
+  }
+  .footer .footer-md__news-intro form input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0%;
+    padding-right: 40px;
+  }
+  .footer .footer-md__news-intro form button {
+    margin-left: -30px;
+    width: 29px;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #121214;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .footer .footer-md__news-intro + p {
+    margin: 15px 0 31px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0%;
+  }
+  .footer .footer-md__news-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px 10px;
+    flex-wrap: wrap;
+  }
+  .footer .footer-md__news-bottom p {
+    color: #707076;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+  }
+}
+@media screen and (max-width: 550px) {
+  .footer .footer-lg {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .footer {
+    padding: 28px 0 36px;
+  }
+  .footer .footer-lg,
+  .footer .footer-md {
+    display: none;
+  }
+  .footer .footer-sm {
+    display: block;
+  }
+  .footer .footer-sm__logo {
+    display: block;
+  }
+  .footer .footer-sm__logo img {
+    margin: 0 auto;
+  }
+}
+.dashboard {
+  padding: 14px 0 113px;
+}
+.dashboard__intro {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.dashboard__intro a,
+.dashboard__intro span {
+  color: #8c8f96;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0%;
+}
+.dashboard__intro a:last-child {
+  color: #121214;
+  font-weight: 600;
+}
+.dashboard__title {
+  margin: 46px 0;
+  color: #121214;
+  font-size: 31px;
+  font-weight: 900;
+  line-height: 42px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+.dashboard__wrapper {
+  display: flex;
+  align-items: start;
+  gap: 30px;
+}
+.dashboard__tabs {
+  position: sticky;
+  top: 20px;
+  width: 318px;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  border: 1px solid #e9eaee;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 28px 36px 22px 40px;
+}
+.dashboard__tabs-item,
+.dashboard__tabs .dashboard__logout {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  cursor: pointer;
+}
+.dashboard__tabs-item span,
+.dashboard__tabs .dashboard__logout span {
+  color: #303030;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0%;
+}
+.dashboard__tabs-item.dashboard__tabs-item_active::before, .dashboard__tabs-item:hover::before,
+.dashboard__tabs .dashboard__logout.dashboard__tabs-item_active::before,
+.dashboard__tabs .dashboard__logout:hover::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: #49d0ff;
+  left: -40px;
+}
+.dashboard__tabs-item.dashboard__tabs-item_active span, .dashboard__tabs-item:hover span,
+.dashboard__tabs .dashboard__logout.dashboard__tabs-item_active span,
+.dashboard__tabs .dashboard__logout:hover span {
+  color: #121214;
+}
+.dashboard__content {
+  width: 100%;
+}
+.dashboard__content .dashboard__tab-content {
+  padding-top: 6px;
+}
+.dashboard__content .myaccount h3 {
+  color: #303030;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0%;
+}
+.dashboard__content .myaccount__cards {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.dashboard__content .myaccount__cards .myaccount__card {
+  padding: 33px 10px;
+  border: 1px solid #f7f7f7;
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  cursor: pointer;
+}
+.dashboard__content .myaccount__cards .myaccount__card span {
+  color: #303030;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0%;
+}
+.dashboard__content .myaccount__cards .myaccount__card img {
+  width: 30px;
+}
+.dashboard__content .myaccount__cards .myaccount__card:hover {
+  border: 1px solid #49d0ff;
+}
+.dashboard__content .myaccount__cards .myaccount__card:hover span {
+  color: #121214;
+}
+.dashboard__content .myaccount__table {
+  margin-top: 47px;
+  padding: 27px 31px 41px;
+  border: 1px solid #e9eaee;
+  border-radius: 5px;
+  background: #fff;
+}
+.dashboard__content .myaccount__table h4 {
+  margin-bottom: 14px;
+  color: #303030;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0%;
+}
+.dashboard__content .myaccount__table table {
+  width: 100%;
+  padding: 0 19px;
+  border-collapse: collapse;
+}
+.dashboard__content .myaccount__table table th:nth-child(1) {
+  padding-left: 19px;
+}
+.dashboard__content .myaccount__table table tbody tr {
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+}
+.dashboard__content .myaccount__table table tbody tr td:nth-child(1) {
+  padding-left: 19px;
+}
+.dashboard__content .myaccount__table table tbody tr:nth-child(odd) {
+  background-color: #fbfbfb;
+}
+.dashboard__content .myaccount__table table tbody td {
+  padding: 18px 0;
+}
+.dashboard__content .myaccount__table table th {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 1%;
+  text-transform: uppercase;
+  text-align: left;
+}
+.dashboard__content .myaccount__table table p {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 1%;
+}
+.dashboard__content .myaccount__table table h5 {
+  color: #121214;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+.dashboard__content .editprofile h3 {
+  color: #303030;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0%;
+}
+.dashboard__content .editprofile__form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.dashboard__content .editprofile__form-fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.dashboard__content .editprofile__form-fields label {
+  padding: 14px 22px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+.dashboard__content .editprofile__form-fields label span {
+  display: block;
+  color: #3c3d44;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0%;
+}
+.dashboard__content .editprofile__form-fields label input {
+  background-color: transparent;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0%;
+  border: none;
+  outline: none;
+}
+.dashboard__content .editprofile__form button {
+  transition: opacity 0.3s ease;
+}
+.dashboard__content .editprofile__form button:hover {
+  opacity: 0.9;
+}
+.dashboard__content .orderhistory h3 {
+  color: #303030;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0%;
+}
+.dashboard__content .orderhistory__table {
+  margin-top: 47px;
+  padding: 11px 31px 42px;
+  border: 1px solid #e9eaee;
+  border-radius: 5px;
+  background: #fff;
+}
+.dashboard__content .orderhistory__table table {
+  width: 100%;
+  padding: 0 19px;
+  border-collapse: collapse;
+}
+.dashboard__content .orderhistory__table table th:nth-child(1) {
+  padding-left: 19px;
+}
+.dashboard__content .orderhistory__table table tbody tr {
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+}
+.dashboard__content .orderhistory__table table tbody tr td:nth-child(1) {
+  padding-left: 19px;
+}
+.dashboard__content .orderhistory__table table tbody tr:nth-child(odd) {
+  background-color: #fbfbfb;
+}
+.dashboard__content .orderhistory__table table tbody td {
+  padding: 18px 0;
+}
+.dashboard__content .orderhistory__table table th {
+  padding: 7px 0;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 1%;
+  text-transform: uppercase;
+  text-align: left;
+}
+.dashboard__content .orderhistory__table table p {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 1%;
+}
+.dashboard__content .orderhistory__table table h5 {
+  color: #121214;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+.dashboard__content .orderhistory__pagination {
+  margin-top: 34px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.dashboard__content .orderhistory__pagination-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  color: #121214;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0%;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.dashboard__content .orderhistory__pagination-item:hover {
+  background-color: #49d0ff;
+  color: #fff;
+}
+.dashboard__content .orderhistory__pagination-item_active {
+  background-color: #49d0ff;
+  color: #fff;
+}
+.dashboard__content .orderhistory__pagination-controls:nth-child(1) {
+  color: lightgray;
+  margin-right: 10px;
+}
+.dashboard__content .orderhistory__pagination-controls:nth-child(2) {
+  color: #121214;
+}
+.dashboard__content .myorders h3 {
+  color: #303030;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0%;
+}
+.dashboard__content .myorders .order-details {
+  margin-top: 25px;
+  border: 1px solid #e9eaee;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 25px 29px 30px;
+}
+.dashboard__content .myorders .order-details .order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px 10px;
+  flex-wrap: wrap;
+  margin-bottom: 33px;
+}
+.dashboard__content .myorders .order-details .order-header div {
+  display: flex;
+  flex-direction: column;
+}
+.dashboard__content .myorders .order-details .order-header h2 {
+  color: #121214;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0%;
+}
+.dashboard__content .myorders .order-details .order-header p {
+  color: #646464;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: 0%;
+}
+.dashboard__content .myorders .order-details .order-header p strong {
+  color: #121214;
+  font-weight: 700;
+}
+.dashboard__content .myorders .order-details .order-header p .order-status {
+  border: 1px solid #f4f4f4;
+  padding: 8px 13px;
+  color: #09b11b;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0%;
+}
+.dashboard__content .myorders .order-details .order-header .back-to-orders {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 23px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+.dashboard__content .myorders .order-details .order-header .back-to-orders i {
+  transition: transform 0.3s ease;
+}
+.dashboard__content .myorders .order-details .order-header .back-to-orders:hover i {
+  transform: translateX(-3px);
+}
+.dashboard__content .myorders .order-details .order-summary {
+  width: 100%;
+  border-collapse: collapse;
+}
+.dashboard__content .myorders .order-details .order-summary th {
+  padding: 7px 0;
+  text-align: left;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 1%;
+  text-transform: uppercase;
+}
+.dashboard__content .myorders .order-details .order-summary td {
+  padding: 18px 0;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 1%;
+  border-bottom: 1px solid #ebebeb;
+}
+.dashboard__content .myorders .order-details .order-summary .total,
+.dashboard__content .myorders .order-details .order-summary .discount,
+.dashboard__content .myorders .order-details .order-summary .delivery {
+  font-weight: 700;
+}
+.dashboard__content .myorders .order-details .order-summary .grand-total td {
+  color: #333333;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 1%;
+  border-top: 2px dashed #ebebeb;
+  border-bottom: none;
+}
+.dashboard__content .myorders__cards {
+  margin-top: 35px;
+  display: flex;
+  gap: 30px;
+}
+.dashboard__content .myorders__cards .myorders__card {
+  position: relative;
+  padding: 31px 35px 69px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border: 1px solid #e9eaee;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.dashboard__content .myorders__cards .myorders__card_header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 188px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 13px 0;
+  background-color: #f8f8f8;
+  color: #303030;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 23px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.dashboard__content .myorders__cards .myorders__card h4 {
+  margin-bottom: 10px;
+  color: #121214;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 23px;
+  letter-spacing: 0%;
+}
+.dashboard__content .myorders__cards .myorders__card p {
+  color: #3b3b3e;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0%;
+}
+.dashboard__content .myorders__cards .myorders__card-item span {
+  display: block;
+  color: #87878d;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0%;
+}
+.dashboard__content .myorders__cards .myorders__card-item a {
+  color: #3b3b3e;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0%;
+}
+.dashboard__content .myorders__cards .myorders__card-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid #e9eaee;
+  border-right: 1px solid #e9eaee;
+  border-top-right-radius: 5px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  padding: 13px 27px 14px 35px;
+}
+.dashboard__content .myorders__cards .myorders__card-footer_controls {
+  cursor: pointer;
+}
+.dashboard__content .myorders__cards .myorders__card-footer span {
+  color: #303030;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 23px;
+  letter-spacing: 0%;
+  margin-left: 9px;
+}
+.dashboard__content .addressTab h3 {
+  color: #303030;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0%;
+}
+.dashboard__content .addressTab__cards {
+  margin-top: 35px;
+  display: flex;
+  gap: 30px;
+}
+.dashboard__content .addressTab__cards .addressTab__card {
+  position: relative;
+  padding: 31px 35px 69px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border: 1px solid #e9eaee;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.dashboard__content .addressTab__cards .addressTab__card_header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 188px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 13px 0;
+  background-color: #f8f8f8;
+  color: #303030;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 23px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.dashboard__content .addressTab__cards .addressTab__card h4 {
+  margin-bottom: 10px;
+  color: #121214;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 23px;
+  letter-spacing: 0%;
+}
+.dashboard__content .addressTab__cards .addressTab__card p {
+  color: #3b3b3e;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0%;
+}
+.dashboard__content .addressTab__cards .addressTab__card-item span {
+  display: block;
+  color: #87878d;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0%;
+}
+.dashboard__content .addressTab__cards .addressTab__card-item a {
+  color: #3b3b3e;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0%;
+}
+.dashboard__content .addressTab__cards .addressTab__card-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid #e9eaee;
+  border-right: 1px solid #e9eaee;
+  border-top-right-radius: 5px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  padding: 13px 27px 14px 35px;
+}
+.dashboard__content .addressTab__cards .addressTab__card-footer_controls {
+  cursor: pointer;
+}
+.dashboard__content .addressTab__cards .addressTab__card-footer span {
+  color: #303030;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 23px;
+  letter-spacing: 0%;
+  margin-left: 9px;
+}
+.dashboard__content .addressTab__add {
+  padding: 30px 0;
+  margin-top: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  border: 1px dashed #e9eaee;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+}
+.dashboard__content .addressTab__add span {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+  border-radius: 50%;
+}
+.dashboard__content .addressTab__add p {
+  color: #6f6f6f;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 23px;
+  letter-spacing: 0%;
+}
+.dashboard__content .editaddress h3 {
+  color: #303030;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0%;
+}
+.dashboard__content .editaddress__form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.dashboard__content .editaddress__form-header {
+  display: flex;
+  gap: 32px;
+}
+.dashboard__content .editaddress__form-header label {
+  width: 50%;
+}
+.dashboard__content .editaddress__form-item {
+  padding: 14px 22px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+.dashboard__content .editaddress__form-item span {
+  display: block;
+  color: #3c3d44;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0%;
+}
+.dashboard__content .editaddress__form-item input,
+.dashboard__content .editaddress__form-item select {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0%;
+}
+.dashboard__content .editaddress__form-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.dashboard__content .passwordTab h3 {
+  color: #303030;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0%;
+}
+.dashboard__content .passwordTab__form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.dashboard__content .passwordTab__form-item {
+  max-width: 433px;
+  background-color: #f9f9f9;
+  padding: 14px 22px;
+  border-radius: 5px;
+}
+.dashboard__content .passwordTab__form-item label {
+  color: #3c3d44;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0%;
+}
+.dashboard__content .passwordTab__form-item .passwordTab__form-input {
+  display: flex;
+  align-items: center;
+}
+.dashboard__content .passwordTab__form-item .passwordTab__form-input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.dashboard__content .passwordTab__form-item .passwordTab__form-input .togglePassword {
+  cursor: pointer;
+}
+.dashboard__content .passwordTab__form button {
+  transition: opacity 0.3s ease;
+}
+.dashboard__content .passwordTab__form button:hover {
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 1220px) {
+  .dashboard__content .myorders__cards .myorders__card_header {
+    width: 40%;
+  }
+  .dashboard__content .addressTab__cards .addressTab__card_header {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .dashboard__content .editaddress__form-header {
+    flex-direction: column;
+  }
+  .dashboard__content .editaddress__form-header label {
+    width: 100%;
+  }
+  .dashboard__content .editaddress__form-footer {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .dashboard__content .myorders__cards {
+    flex-direction: column;
+  }
+  .dashboard__content .myorders__cards .myorders__card_header {
+    width: 40%;
+  }
+  .dashboard__content .addressTab__cards {
+    flex-direction: column;
+  }
+  .dashboard__content .addressTab__cards .addressTab__card_header {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 950px) {
+  .dashboard__content .myaccount__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 900px) {
+  .dashboard__content .editprofile__form-fields {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 850px) {
+  .dashboard__content .myaccount__table {
+    padding: 20px 0 30px;
+  }
+  .dashboard__content .myaccount__table h4 {
+    padding-left: 19px;
+  }
+  .dashboard__content .orderhistory__table {
+    padding: 20px 0 30px;
+  }
+  .dashboard__content .orderhistory__table h4 {
+    padding-left: 19px;
+  }
+  .dashboard__content .orderhistory__pagination {
+    padding-left: 19px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dashboard {
+    padding-bottom: 80px;
+  }
+  .dashboard__title {
+    margin: 30px 0 21px;
+    font-size: 19px;
+    line-height: 25px;
+  }
+  .dashboard__wrapper {
+    flex-direction: column;
+  }
+  .dashboard__tabs {
+    position: static;
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 50px;
+  }
+  .dashboard__tabs::-webkit-scrollbar {
+    height: 3px;
+  }
+  .dashboard__tabs::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #49d0ff;
+  }
+  .dashboard__tabs-item,
+  .dashboard__tabs .dashboard__logout {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  .dashboard__tabs-item.dashboard__tabs-item_active::before, .dashboard__tabs-item:hover::before,
+  .dashboard__tabs .dashboard__logout.dashboard__tabs-item_active::before,
+  .dashboard__tabs .dashboard__logout:hover::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #49d0ff;
+    left: 0;
+    top: -28px;
+  }
+  .dashboard__content .myaccount h3 {
+    font-size: 19px;
+  }
+  .dashboard__content .myaccount__cards {
+    gap: 25px;
+  }
+  .dashboard__content .myaccount__cards .myaccount__card img {
+    width: 20px;
+  }
+  .dashboard__content .myaccount__table {
+    overflow-x: auto;
+  }
+  .dashboard__content .myaccount__table::-webkit-scrollbar {
+    height: 3px;
+  }
+  .dashboard__content .myaccount__table::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #121214;
+  }
+  .dashboard__content .myaccount__table h4 {
+    font-size: 19px;
+    line-height: 25px;
+  }
+  .dashboard__content .myaccount__table table {
+    min-width: 500px;
+  }
+  .dashboard__content .editprofile h3 {
+    font-size: 19px;
+  }
+  .dashboard__content .editprofile__form {
+    margin-top: 20px;
+    gap: 20px;
+  }
+  .dashboard__content .editprofile__form-fields {
+    gap: 20px;
+  }
+  .dashboard__content .orderhistory h3 {
+    font-size: 19px;
+  }
+  .dashboard__content .orderhistory__table {
+    margin-top: 25px;
+    overflow-x: auto;
+  }
+  .dashboard__content .orderhistory__table::-webkit-scrollbar {
+    height: 3px;
+  }
+  .dashboard__content .orderhistory__table::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #121214;
+  }
+  .dashboard__content .orderhistory__table h4 {
+    font-size: 19px;
+    line-height: 25px;
+  }
+  .dashboard__content .orderhistory__table table {
+    min-width: 500px;
+  }
+  .dashboard__content .myorders h3 {
+    font-size: 19px;
+  }
+  .dashboard__content .myorders .order-details {
+    overflow-x: auto;
+  }
+  .dashboard__content .myorders .order-details::-webkit-scrollbar {
+    height: 3px;
+  }
+  .dashboard__content .myorders .order-details::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #121214;
+  }
+  .dashboard__content .myorders .order-details .order-summary {
+    min-width: 500px;
+  }
+  .dashboard__content .myorders__cards {
+    gap: 20px;
+  }
+  .dashboard__content .addressTab h3 {
+    font-size: 19px;
+  }
+  .dashboard__content .addressTab__cards {
+    gap: 20px;
+  }
+  .dashboard__content .addressTab__add {
+    margin-top: 20px;
+  }
+  .dashboard__content .addressTab__add span {
+    width: 50px;
+    height: 50px;
+  }
+  .dashboard__content .addressTab__add span img {
+    width: 15px;
+  }
+  .dashboard__content .addressTab__add p {
+    font-size: 14px;
+  }
+  .dashboard__content .editaddress h3 {
+    font-size: 19px;
+  }
+  .dashboard__content .editaddress__form {
+    margin-top: 20px;
+    gap: 20px;
+  }
+  .dashboard__content .editaddress__form-header, .dashboard__content .editaddress__form-footer {
+    gap: 20px;
+  }
+  .dashboard__content .passwordTab h3 {
+    font-size: 19px;
+  }
+  .dashboard__content .passwordTab__form {
+    margin-top: 20px;
+    gap: 20px;
+  }
+  .dashboard__content .passwordTab__form-item {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .dashboard__content .myorders__cards .myorders__card {
+    padding-top: 40px;
+    gap: 10px;
+  }
+  .dashboard__content .myorders__cards .myorders__card_header {
+    width: 45%;
+    font-size: 10px;
+    padding: 5px 0;
+  }
+  .dashboard__content .myorders__cards .myorders__card h4 {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .dashboard__content .myorders__cards .myorders__card p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .dashboard__content .myorders__cards .myorders__card-item span,
+  .dashboard__content .myorders__cards .myorders__card-item a {
+    line-height: 20px;
+  }
+  .dashboard__content .myorders__cards .myorders__card-footer {
+    justify-content: center;
+    width: 100%;
+    border-radius: 0;
+  }
+  .dashboard__content .addressTab__cards .addressTab__card {
+    padding-top: 40px;
+    gap: 10px;
+  }
+  .dashboard__content .addressTab__cards .addressTab__card_header {
+    width: 45%;
+    font-size: 10px;
+    padding: 5px 0;
+  }
+  .dashboard__content .addressTab__cards .addressTab__card h4 {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .dashboard__content .addressTab__cards .addressTab__card p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .dashboard__content .addressTab__cards .addressTab__card-item span,
+  .dashboard__content .addressTab__cards .addressTab__card-item a {
+    line-height: 20px;
+  }
+  .dashboard__content .addressTab__cards .addressTab__card-footer {
+    justify-content: center;
+    width: 100%;
+    border-radius: 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  .dashboard__tabs {
+    gap: 25px;
+  }
+  .dashboard__content .myaccount__cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .dashboard__content .myaccount__cards .myaccount__card {
+    padding: 20px 0;
+  }
+  .dashboard__content .myaccount__cards .myaccount__card span {
+    font-size: 14px;
+  }
+  .dashboard__content .myorders__cards .myorders__card-footer span {
+    display: none;
+  }
+  .dashboard__content .addressTab__cards .addressTab__card-footer span {
+    display: none;
+  }
+}
+@media screen and (max-width: 360px) {
+  .dashboard {
+    padding-bottom: 60px;
+  }
+  .dashboard__content .editprofile__form button {
+    width: 100%;
+  }
+  .dashboard__content .orderhistory__pagination-item {
+    width: 35px;
+    height: 35px;
+  }
+  .dashboard__content .myorders__cards .myorders__card {
+    padding-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .dashboard__content .myorders__cards .myorders__card_header {
+    width: 100%;
+  }
+  .dashboard__content .myorders__add {
+    flex-direction: column;
+  }
+  .dashboard__content .addressTab__cards .addressTab__card {
+    padding-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .dashboard__content .addressTab__cards .addressTab__card_header {
+    width: 100%;
+  }
+  .dashboard__content .addressTab__add {
+    flex-direction: column;
+  }
+  .dashboard__content .editaddress h3 {
+    text-align: center;
+  }
+  .dashboard__content .editaddress__form {
+    margin-top: 15px;
+    gap: 15px;
+  }
+  .dashboard__content .editaddress__form-header, .dashboard__content .editaddress__form-footer {
+    gap: 15px;
+  }
+  .dashboard__content .editaddress__form button {
+    width: 100%;
+  }
+  .dashboard__content .passwordTab__form {
+    gap: 15px;
+  }
+  .dashboard__content .passwordTab__form button {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=dashboard.css.map */

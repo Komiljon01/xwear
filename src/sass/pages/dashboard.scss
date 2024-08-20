@@ -1,0 +1,1457 @@
+@import "../base/reset";
+@import "../abstracts/_variables";
+@import "../components/button";
+@import "../base/global";
+@import "../components/navbar";
+@import "../components/_footer";
+
+.dashboard {
+  padding: 14px 0 113px;
+
+  &__intro {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    a,
+    span {
+      color: #8c8f96;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0%;
+    }
+
+    a {
+      &:last-child {
+        color: $primary;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__title {
+    margin: 46px 0;
+    color: $primary;
+    font-size: 31px;
+    font-weight: 900;
+    line-height: 42px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: start;
+    gap: 30px;
+  }
+
+  &__tabs {
+    position: sticky;
+    top: 20px;
+    width: 318px;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    border: 1px solid #e9eaee;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 28px 36px 22px 40px;
+
+    &-item,
+    .dashboard__logout {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 21px;
+      cursor: pointer;
+
+      span {
+        color: #303030;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0%;
+      }
+
+      &.dashboard__tabs-item_active::before,
+      &:hover::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        background-color: #49d0ff;
+        left: -40px;
+      }
+
+      &.dashboard__tabs-item_active span,
+      &:hover span {
+        color: $primary;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    .dashboard__tab-content {
+      padding-top: 6px;
+    }
+
+    // Tab-1 content
+    .myaccount {
+      h3 {
+        color: #303030;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: 0%;
+      }
+
+      &__cards {
+        margin-top: 35px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        .myaccount__card {
+          padding: 33px 10px;
+          border: 1px solid #f7f7f7;
+          border-radius: 5px;
+          background-color: #fff;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 15px;
+          cursor: pointer;
+
+          span {
+            color: #303030;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0%;
+          }
+
+          img {
+            width: 30px;
+          }
+
+          &:hover {
+            border: 1px solid #49d0ff;
+
+            span {
+              color: $primary;
+            }
+          }
+        }
+      }
+
+      &__table {
+        margin-top: 47px;
+        padding: 27px 31px 41px;
+        border: 1px solid #e9eaee;
+        border-radius: 5px;
+        background: #fff;
+
+        h4 {
+          margin-bottom: 14px;
+          color: #303030;
+          font-size: 23px;
+          font-weight: 700;
+          line-height: 30px;
+          letter-spacing: 0%;
+        }
+
+        table {
+          width: 100%;
+          padding: 0 19px;
+          border-collapse: collapse;
+
+          th:nth-child(1) {
+            padding-left: 19px;
+          }
+
+          tbody {
+            tr {
+              border-top: 1px solid #ebebeb;
+              border-bottom: 1px solid #ebebeb;
+
+              td:nth-child(1) {
+                padding-left: 19px;
+              }
+            }
+
+            tr:nth-child(odd) {
+              background-color: #fbfbfb;
+            }
+
+            td {
+              padding: 18px 0;
+            }
+          }
+
+          th {
+            color: #333333;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 30px;
+            letter-spacing: 1%;
+            text-transform: uppercase;
+            text-align: left;
+          }
+
+          p {
+            color: #333333;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 30px;
+            letter-spacing: 1%;
+          }
+
+          h5 {
+            color: $primary;
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0%;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    // Tab-2 content
+    .editprofile {
+      h3 {
+        color: #303030;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 0%;
+      }
+
+      &__form {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        &-fields {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 30px;
+
+          label {
+            padding: 14px 22px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+
+            span {
+              display: block;
+              color: #3c3d44;
+              font-size: 13px;
+              font-weight: 600;
+              line-height: 22px;
+              letter-spacing: 0%;
+            }
+
+            input {
+              background-color: transparent;
+              color: #000;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 22px;
+              letter-spacing: 0%;
+              border: none;
+              outline: none;
+            }
+          }
+        }
+
+        button {
+          transition: opacity 0.3s ease;
+
+          &:hover {
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+
+    // Tab-3 content
+    .orderhistory {
+      h3 {
+        color: #303030;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 0%;
+      }
+
+      &__table {
+        margin-top: 47px;
+        padding: 11px 31px 42px;
+        border: 1px solid #e9eaee;
+        border-radius: 5px;
+        background: #fff;
+
+        table {
+          width: 100%;
+          padding: 0 19px;
+          border-collapse: collapse;
+
+          th:nth-child(1) {
+            padding-left: 19px;
+          }
+
+          tbody {
+            tr {
+              border-top: 1px solid #ebebeb;
+              border-bottom: 1px solid #ebebeb;
+
+              td:nth-child(1) {
+                padding-left: 19px;
+              }
+            }
+
+            tr:nth-child(odd) {
+              background-color: #fbfbfb;
+            }
+
+            td {
+              padding: 18px 0;
+            }
+          }
+
+          th {
+            padding: 7px 0;
+            color: #333333;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 30px;
+            letter-spacing: 1%;
+            text-transform: uppercase;
+            text-align: left;
+          }
+
+          p {
+            color: #333333;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 30px;
+            letter-spacing: 1%;
+          }
+
+          h5 {
+            color: $primary;
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0%;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      &__pagination {
+        margin-top: 34px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        &-item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 45px;
+          height: 45px;
+          color: $primary;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 18px;
+          letter-spacing: 0%;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: #49d0ff;
+            color: #fff;
+          }
+        }
+
+        &-item_active {
+          background-color: #49d0ff;
+          color: #fff;
+        }
+
+        &-controls {
+          &:nth-child(1) {
+            color: lightgray;
+            margin-right: 10px;
+          }
+
+          &:nth-child(2) {
+            color: $primary;
+          }
+        }
+      }
+    }
+
+    // Tab-5 content
+    .myorders {
+      h3 {
+        color: #303030;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 0%;
+      }
+
+      .order-details {
+        margin-top: 25px;
+        border: 1px solid #e9eaee;
+        border-radius: 5px;
+        background-color: #fff;
+        padding: 25px 29px 30px;
+
+        .order-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 15px 10px;
+          flex-wrap: wrap;
+          margin-bottom: 33px;
+
+          div {
+            display: flex;
+            flex-direction: column;
+          }
+
+          h2 {
+            color: $primary;
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 30px;
+            letter-spacing: 0%;
+          }
+
+          p {
+            color: #646464;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 35px;
+            letter-spacing: 0%;
+
+            strong {
+              color: $primary;
+              font-weight: 700;
+            }
+
+            .order-status {
+              border: 1px solid #f4f4f4;
+              padding: 8px 13px;
+              color: #09b11b;
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 21px;
+              letter-spacing: 0%;
+            }
+          }
+
+          .back-to-orders {
+            color: #000000;
+            font-size: 12px;
+            font-weight: 800;
+            line-height: 23px;
+            letter-spacing: 0%;
+            text-transform: uppercase;
+
+            i {
+              transition: transform 0.3s ease;
+            }
+
+            &:hover i {
+              transform: translateX(-3px);
+            }
+          }
+        }
+
+        .order-summary {
+          width: 100%;
+          border-collapse: collapse;
+
+          th {
+            padding: 7px 0;
+            text-align: left;
+            color: #333333;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 30px;
+            letter-spacing: 1%;
+            text-transform: uppercase;
+          }
+
+          td {
+            padding: 18px 0;
+            color: #333333;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 30px;
+            letter-spacing: 1%;
+            border-bottom: 1px solid #ebebeb;
+          }
+
+          .total,
+          .discount,
+          .delivery {
+            font-weight: 700;
+          }
+
+          .grand-total {
+            td {
+              color: #333333;
+              font-size: 19px;
+              font-weight: 700;
+              line-height: 30px;
+              letter-spacing: 1%;
+              border-top: 2px dashed #ebebeb;
+              border-bottom: none;
+            }
+          }
+        }
+      }
+
+      &__cards {
+        margin-top: 35px;
+        display: flex;
+        gap: 30px;
+
+        .myorders__card {
+          position: relative;
+          padding: 31px 35px 69px;
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          border: 1px solid #e9eaee;
+          border-radius: 5px;
+          background-color: #fff;
+
+          &_header {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 188px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            padding: 13px 0;
+            background-color: #f8f8f8;
+            color: #303030;
+            font-size: 11px;
+            font-weight: 800;
+            line-height: 23px;
+            letter-spacing: 0%;
+            text-align: center;
+          }
+
+          h4 {
+            margin-bottom: 10px;
+            color: $primary;
+            font-size: 19px;
+            font-weight: 600;
+            line-height: 23px;
+            letter-spacing: 0%;
+          }
+
+          p {
+            color: #3b3b3e;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 25px;
+            letter-spacing: 0%;
+          }
+
+          &-item {
+            span {
+              display: block;
+              color: #87878d;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 25px;
+              letter-spacing: 0%;
+            }
+
+            a {
+              color: #3b3b3e;
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 25px;
+              letter-spacing: 0%;
+            }
+          }
+
+          &-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-top: 1px solid #e9eaee;
+            border-right: 1px solid #e9eaee;
+            border-top-right-radius: 5px;
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+            gap: 27px;
+            padding: 13px 27px 14px 35px;
+
+            &_controls {
+              cursor: pointer;
+            }
+
+            span {
+              color: #303030;
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 23px;
+              letter-spacing: 0%;
+              margin-left: 9px;
+            }
+          }
+        }
+      }
+    }
+
+    // Tab-5 content
+    .addressTab {
+      h3 {
+        color: #303030;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 0%;
+      }
+
+      &__cards {
+        margin-top: 35px;
+        display: flex;
+        gap: 30px;
+
+        .addressTab__card {
+          position: relative;
+          padding: 31px 35px 69px;
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          border: 1px solid #e9eaee;
+          border-radius: 5px;
+          background-color: #fff;
+
+          &_header {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 188px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            padding: 13px 0;
+            background-color: #f8f8f8;
+            color: #303030;
+            font-size: 11px;
+            font-weight: 800;
+            line-height: 23px;
+            letter-spacing: 0%;
+            text-align: center;
+          }
+
+          h4 {
+            margin-bottom: 10px;
+            color: $primary;
+            font-size: 19px;
+            font-weight: 600;
+            line-height: 23px;
+            letter-spacing: 0%;
+          }
+
+          p {
+            color: #3b3b3e;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 25px;
+            letter-spacing: 0%;
+          }
+
+          &-item {
+            span {
+              display: block;
+              color: #87878d;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 25px;
+              letter-spacing: 0%;
+            }
+
+            a {
+              color: #3b3b3e;
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 25px;
+              letter-spacing: 0%;
+            }
+          }
+
+          &-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-top: 1px solid #e9eaee;
+            border-right: 1px solid #e9eaee;
+            border-top-right-radius: 5px;
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+            gap: 27px;
+            padding: 13px 27px 14px 35px;
+
+            &_controls {
+              cursor: pointer;
+            }
+
+            span {
+              color: #303030;
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 23px;
+              letter-spacing: 0%;
+              margin-left: 9px;
+            }
+          }
+        }
+      }
+
+      &__add {
+        padding: 30px 0;
+        margin-top: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 17px;
+        border: 1px dashed #e9eaee;
+        border-radius: 5px;
+        background: #fff;
+        cursor: pointer;
+
+        span {
+          width: 62px;
+          height: 62px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #f8f8f8;
+          border-radius: 50%;
+        }
+
+        p {
+          color: #6f6f6f;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 23px;
+          letter-spacing: 0%;
+        }
+      }
+    }
+
+    // Tab-6 content
+    .editaddress {
+      h3 {
+        color: #303030;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 0%;
+      }
+
+      &__form {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        &-header {
+          display: flex;
+          gap: 32px;
+
+          label {
+            width: 50%;
+          }
+        }
+
+        &-item {
+          padding: 14px 22px;
+          border-radius: 5px;
+          background-color: #f9f9f9;
+
+          span {
+            display: block;
+            color: #3c3d44;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 22px;
+            letter-spacing: 0%;
+          }
+
+          input,
+          select {
+            width: 100%;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0%;
+          }
+        }
+
+        &-footer {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 32px;
+        }
+      }
+    }
+
+    // Tab-7 content
+    .passwordTab {
+      h3 {
+        color: #303030;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 0%;
+      }
+
+      &__form {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        &-item {
+          max-width: 433px;
+          background-color: #f9f9f9;
+          padding: 14px 22px;
+          border-radius: 5px;
+
+          label {
+            color: #3c3d44;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 22px;
+            letter-spacing: 0%;
+          }
+
+          .passwordTab__form-input {
+            display: flex;
+            align-items: center;
+
+            input {
+              width: 100%;
+              border: none;
+              outline: none;
+              background-color: transparent;
+            }
+
+            .togglePassword {
+              cursor: pointer;
+            }
+          }
+        }
+
+        button {
+          transition: opacity 0.3s ease;
+
+          &:hover {
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .dashboard {
+    &__content {
+      .myorders {
+        &__cards {
+          .myorders__card {
+            &_header {
+              width: 40%;
+            }
+          }
+        }
+      }
+
+      .addressTab {
+        &__cards {
+          .addressTab__card {
+            &_header {
+              width: 40%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .dashboard {
+    &__content {
+      .editaddress {
+        &__form {
+          &-header {
+            flex-direction: column;
+            label {
+              width: 100%;
+            }
+          }
+
+          &-footer {
+            grid-template-columns: 1fr;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .dashboard {
+    &__content {
+      .myorders {
+        &__cards {
+          flex-direction: column;
+
+          .myorders__card {
+            &_header {
+              width: 40%;
+            }
+          }
+        }
+      }
+
+      .addressTab {
+        &__cards {
+          flex-direction: column;
+
+          .addressTab__card {
+            &_header {
+              width: 40%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .dashboard {
+    &__content {
+      .myaccount {
+        &__cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .dashboard {
+    &__content {
+      .editprofile {
+        &__form {
+          &-fields {
+            grid-template-columns: 1fr;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .dashboard {
+    &__content {
+      .myaccount {
+        &__table {
+          padding: 20px 0 30px;
+
+          h4 {
+            padding-left: 19px;
+          }
+        }
+      }
+
+      .orderhistory {
+        &__table {
+          padding: 20px 0 30px;
+
+          h4 {
+            padding-left: 19px;
+          }
+        }
+
+        &__pagination {
+          padding-left: 19px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard {
+    padding-bottom: 80px;
+
+    &__title {
+      margin: 30px 0 21px;
+      font-size: 19px;
+      line-height: 25px;
+    }
+
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__tabs {
+      position: static;
+      width: 100%;
+      flex-direction: row;
+      overflow-x: auto;
+      gap: 50px;
+
+      &::-webkit-scrollbar {
+        height: 3px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: #49d0ff;
+      }
+
+      &-item,
+      .dashboard__logout {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+
+        &.dashboard__tabs-item_active::before,
+        &:hover::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          background-color: #49d0ff;
+          left: 0;
+          top: -28px;
+        }
+      }
+    }
+
+    &__content {
+      .myaccount {
+        h3 {
+          font-size: 19px;
+        }
+
+        &__cards {
+          gap: 25px;
+
+          .myaccount__card {
+            img {
+              width: 20px;
+            }
+          }
+        }
+
+        &__table {
+          overflow-x: auto;
+
+          &::-webkit-scrollbar {
+            height: 3px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background-color: $primary;
+          }
+
+          h4 {
+            font-size: 19px;
+            line-height: 25px;
+          }
+
+          table {
+            min-width: 500px;
+          }
+        }
+      }
+
+      .editprofile {
+        h3 {
+          font-size: 19px;
+        }
+
+        &__form {
+          margin-top: 20px;
+          gap: 20px;
+
+          &-fields {
+            gap: 20px;
+          }
+        }
+      }
+
+      .orderhistory {
+        h3 {
+          font-size: 19px;
+        }
+
+        &__table {
+          margin-top: 25px;
+          overflow-x: auto;
+
+          &::-webkit-scrollbar {
+            height: 3px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background-color: $primary;
+          }
+
+          h4 {
+            font-size: 19px;
+            line-height: 25px;
+          }
+
+          table {
+            min-width: 500px;
+          }
+        }
+      }
+
+      .myorders {
+        h3 {
+          font-size: 19px;
+        }
+
+        .order-details {
+          overflow-x: auto;
+
+          &::-webkit-scrollbar {
+            height: 3px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background-color: $primary;
+          }
+
+          .order-summary {
+            min-width: 500px;
+          }
+        }
+
+        &__cards {
+          gap: 20px;
+        }
+      }
+
+      .addressTab {
+        h3 {
+          font-size: 19px;
+        }
+
+        &__cards {
+          gap: 20px;
+        }
+
+        &__add {
+          margin-top: 20px;
+
+          span {
+            width: 50px;
+            height: 50px;
+
+            img {
+              width: 15px;
+            }
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .editaddress {
+        h3 {
+          font-size: 19px;
+        }
+
+        &__form {
+          margin-top: 20px;
+          gap: 20px;
+
+          &-header,
+          &-footer {
+            gap: 20px;
+          }
+        }
+      }
+
+      .passwordTab {
+        h3 {
+          font-size: 19px;
+        }
+
+        &__form {
+          margin-top: 20px;
+          gap: 20px;
+
+          &-item {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .dashboard {
+    &__content {
+      .myorders {
+        &__cards {
+          .myorders__card {
+            padding-top: 40px;
+            gap: 10px;
+
+            &_header {
+              width: 45%;
+              font-size: 10px;
+              padding: 5px 0;
+            }
+
+            h4 {
+              font-size: 15px;
+              line-height: 20px;
+            }
+
+            p {
+              font-size: 14px;
+              line-height: 20px;
+            }
+
+            &-item {
+              span,
+              a {
+                line-height: 20px;
+              }
+            }
+
+            &-footer {
+              justify-content: center;
+              width: 100%;
+              border-radius: 0;
+            }
+          }
+        }
+      }
+
+      .addressTab {
+        &__cards {
+          .addressTab__card {
+            padding-top: 40px;
+            gap: 10px;
+
+            &_header {
+              width: 45%;
+              font-size: 10px;
+              padding: 5px 0;
+            }
+
+            h4 {
+              font-size: 15px;
+              line-height: 20px;
+            }
+
+            p {
+              font-size: 14px;
+              line-height: 20px;
+            }
+
+            &-item {
+              span,
+              a {
+                line-height: 20px;
+              }
+            }
+
+            &-footer {
+              justify-content: center;
+              width: 100%;
+              border-radius: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .dashboard {
+    &__tabs {
+      gap: 25px;
+    }
+
+    &__content {
+      .myaccount {
+        &__cards {
+          grid-template-columns: 1fr;
+          gap: 15px;
+
+          .myaccount__card {
+            padding: 20px 0;
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      .myorders {
+        &__cards {
+          .myorders__card {
+            &-footer {
+              span {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      .addressTab {
+        &__cards {
+          .addressTab__card {
+            &-footer {
+              span {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .dashboard {
+    padding-bottom: 60px;
+
+    &__content {
+      .editprofile {
+        &__form {
+          button {
+            width: 100%;
+          }
+        }
+      }
+
+      .orderhistory {
+        &__pagination {
+          &-item {
+            width: 35px;
+            height: 35px;
+          }
+        }
+      }
+
+      .myorders {
+        &__cards {
+          .myorders__card {
+            padding-top: 50px;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            &_header {
+              width: 100%;
+            }
+          }
+        }
+
+        &__add {
+          flex-direction: column;
+        }
+      }
+
+      .addressTab {
+        &__cards {
+          .addressTab__card {
+            padding-top: 50px;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            &_header {
+              width: 100%;
+            }
+          }
+        }
+
+        &__add {
+          flex-direction: column;
+        }
+      }
+
+      .editaddress {
+        h3 {
+          text-align: center;
+        }
+
+        &__form {
+          margin-top: 15px;
+          gap: 15px;
+
+          &-header,
+          &-footer {
+            gap: 15px;
+          }
+
+          button {
+            width: 100%;
+          }
+        }
+      }
+
+      .passwordTab {
+        &__form {
+          gap: 15px;
+
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
